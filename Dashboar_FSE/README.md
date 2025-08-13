@@ -21,13 +21,15 @@ By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds
 ### Transformations
 1. **Split `analyzer_id` & `analyzer_model`**  
    - Extracted from **Column D** to create separate fields for better filtering and analysis.  
-   ![Split column D]<img width="1716" height="1010" alt="Split Model" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
+   <img width="1716" height="1010" alt="Split Model" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
 
 
 2. **Split `start_time` & `end_time`**  
    - Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).  
-   ![Start](<Intervention Start.png>)
-   ![End](<Intervention End.png>)
+   <img width="870" height="548" alt="Intervention Start" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" />
+
+   <img width="875" height="547" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />
+
 
 3. **Extract `fse_name`**  
    - Taken from **Column O**.  
@@ -37,19 +39,12 @@ By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds
 
 5. **Rename Columns to Code-Friendly Format**  
    - Improves DAX usability and avoids syntax issues.  
-   ![Rename columns](<Rename Columns.png>)
-
-6. **Calculate Total Minutes**  
-   - Convert resolution time into minutes for easier aggregation in DAX.  
-
-7. **Other Applied Steps**  
-   - Replaced values, data type changes.  
-   ![Total Queries](<Total Queries.png>)
+   <img width="958" height="872" alt="Rename Columns" src="https://github.com/user-attachments/assets/bf9db4df-e463-40cf-9d80-260774f84af9" />
 
 ---
 
 ## 📊 Data Modeling (Power Pivot)
-![Dashboard](Dashboard.gif)
+
 ### Key DAX Measures
 - **Downtime per Intervention (hrs)**  
   ```DAX
@@ -58,7 +53,7 @@ By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds
       DISTINCTCOUNT(FSE_s_Reports[report_id])
   )
 ## 📈 Dashboard Insights
-
+![Dashboard](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 ### 🎯 Slicers
 - **Analyzer**
 - **Spare Part**
@@ -84,7 +79,7 @@ By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds
 ---
 
 ## ❓ Analysis Questions & Answers
-![Dashboard](Dashboard.png)
+<img width="1897" height="753" alt="Dashboard" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
 ### 1. Spare Part Causing Most Downtime Relative to Replacement Frequency
 **Pivot Table:**  
 - Rows = `Spare Part`  
