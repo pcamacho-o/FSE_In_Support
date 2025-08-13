@@ -21,7 +21,8 @@ By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds
 ### Transformations
 1. **Split `analyzer_id` & `analyzer_model`**  
    - Extracted from **Column D** to create separate fields for better filtering and analysis.  
-   ![Split column D](<Split Model.png>)
+   ![Split column D]<img width="1716" height="1010" alt="Split Model" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
+
 
 2. **Split `start_time` & `end_time`**  
    - Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).  
