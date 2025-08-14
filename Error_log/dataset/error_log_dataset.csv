@@ -1,0 +1,556 @@
+﻿timestamp,error_code,error_type,description,severity,analyzer_id,firmware_version,temperature,operator
+2025-01-02 14:04:42,RAC-2091,Rack Handler,Rack motor jammed,Warning,EC-93810-001,4.1.0,29.6,Pablo Neruda
+2025-02-19 06:05:40,SAM-8667,Sample Handler,Sample not aspirated,Critical,EC-93810-001,1.5.17,19.3,Pablo Neruda
+2024-11-24 12:58:45,SAM-3671,Sample Handler,Sample probe clogged,Info,EC-93810-001,3.6.2,31.2,Monica Araya
+2025-03-30 10:39:09,POW-7964,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,3.9.7,19.4,Eduardo Galeano
+2025-01-27 08:48:13,SAM-3083,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,2.9.8,29.7,Oswaldo Guayasamin
+2025-07-28 06:25:07,FLU-6448,Fluidics,Fluid leak detected,Info,EC-93810-001,4.7.14,16.2,Oswaldo Guayasamin
+2025-03-31 22:20:42,POW-3935,Power Supply,Power surge detected,Info,EC-93810-001,3.6.20,16.8,Eduardo Galeano
+2024-12-31 05:52:18,BAR-4995,Barcode Reader,Barcode checksum mismatch,Critical,EC-93810-001,2.8.2,21.2,Oswaldo Guayasamin
+2025-03-26 04:22:59,RAC-8356,Rack Handler,Rack position error,Critical,EC-93810-001,3.6.1,26.8,Mario Benedetti
+2025-04-21 22:32:04,REA-9017,Reagent Management,Reagent bottle missing,Warning,EC-93810-001,3.8.10,30.6,Mario Benedetti
+2024-09-11 12:12:14,BAR-4352,Barcode Reader,Unreadable barcode,Info,EC-93810-001,4.6.6,15.1,Mario Benedetti
+2025-08-07 10:06:14,POW-8174,Power Supply,Power supply overload,Critical,EC-93810-001,1.9.14,16.2,Juan Angola
+2025-07-26 12:36:43,OPT-7329,Optics,Light source intensity low,Critical,EC-93810-001,4.9.9,19.3,Violeta Parra
+2025-08-12 04:00:06,OPT-9149,Optics,Wavelength calibration failed,Critical,EC-93810-001,1.1.14,15.7,Juan Angola
+2024-09-07 01:12:55,OPT-9086,Optics,Light source intensity low,Info,EC-93810-001,5.7.16,27.5,Eduardo Galeano
+2024-09-06 17:18:59,TEM-3819,Temperature Control,Cooling system failure,Info,EC-93810-001,2.2.9,16.4,Gabriela Mistral
+2024-12-15 11:04:19,BAR-6994,Barcode Reader,Barcode checksum mismatch,Warning,EC-93810-001,4.4.0,34.1,Eduardo Galeano
+2024-12-23 01:27:22,REA-6110,Reagent Management,Reagent mixing error,Info,EC-93810-001,2.8.16,26.2,Aline Prata
+2024-10-14 21:01:25,REA-1799,Reagent Management,Reagent mixing error,Critical,EC-93810-001,2.9.19,23.2,Gabriela Mistral
+2025-02-05 08:47:09,BAR-9220,Barcode Reader,Barcode scanner timeout,Info,EC-93810-001,3.2.16,18.5,Mario Benedetti
+2024-09-11 20:34:55,SAM-4239,Sample Handler,Sample probe alignment error,Info,EC-93810-001,4.5.7,28,Aline Prata
+2024-11-01 23:40:01,RAC-7373,Rack Handler,Rack position error,Info,EC-93810-001,2.7.10,28.3,Eduardo Galeano
+2025-05-05 17:27:36,FLU-3725,Fluidics,Reservoir empty,Critical,EC-93810-001,3.6.0,31.5,Pepe Mujica
+2025-03-26 11:30:11,SAM-4180,Sample Handler,Sample vial missing,Warning,EC-93810-001,5.7.5,27.4,Eduardo Galeano
+2024-09-12 16:58:44,SAM-4172,Sample Handler,Sample probe clogged,Info,EC-93810-001,3.0.7,34,Oswaldo Guayasamin
+2024-08-14 07:55:04,FLU-8968,Fluidics,Pump pressure adjustment needed,Info,EC-93810-001,3.4.7,24.2,Violeta Parra
+2025-03-31 18:14:46,BAR-5999,Barcode Reader,Unreadable barcode,Critical,EC-93810-001,5.6.7,28.8,Juan Angola
+2025-06-04 04:18:55,POW-7499,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,1.3.5,26.1,Monica Araya
+2025-04-03 20:55:31,FLU-9594,Fluidics,Fluid leak detected,Warning,EC-93810-001,1.8.13,30.8,Mario Benedetti
+2025-04-23 13:35:58,POW-8654,Power Supply,Battery backup failure,Warning,EC-93810-001,1.0.2,16.8,Mario Benedetti
+2025-04-08 10:56:58,OPT-1074,Optics,Wavelength calibration failed,Critical,EC-93810-001,2.9.18,28.7,Eduardo Galeano
+2024-11-16 08:52:31,REA-9051,Reagent Management,Reagent mixing error,Warning,EC-93810-001,5.9.9,30.3,Eduardo Galeano
+2025-07-26 22:30:34,TEM-5623,Temperature Control,Temperature sensor error,Warning,EC-93810-001,5.5.0,30.1,Violeta Parra
+2024-10-23 17:59:07,TEM-2248,Temperature Control,Heater malfunction,Critical,EC-93810-001,3.1.6,17.7,Aline Prata
+2024-09-08 18:41:44,TEM-6288,Temperature Control,Heater malfunction,Warning,EC-93810-001,5.5.9,28.7,Monica Araya
+2024-10-22 18:27:05,OPT-3698,Optics,Wavelength calibration failed,Info,EC-93810-001,2.9.9,22.5,Violeta Parra
+2025-05-09 03:18:15,REA-5725,Reagent Management,Reagent bottle missing,Info,EC-93810-001,5.0.2,25,Monica Araya
+2025-02-28 12:04:08,POW-6344,Power Supply,Power surge detected,Warning,EC-93810-001,1.6.17,31.6,Pepe Mujica
+2025-07-05 10:59:48,POW-1827,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,5.9.18,35,Pablo Neruda
+2025-04-04 11:32:25,TEM-1983,Temperature Control,Cooling system failure,Warning,EC-93810-001,3.3.17,19.4,Oswaldo Guayasamin
+2024-08-16 05:19:25,BAR-2557,Barcode Reader,Barcode checksum mismatch,Info,EC-93810-001,2.9.11,17.6,Eduardo Galeano
+2025-03-13 22:03:16,BAR-2487,Barcode Reader,Barcode checksum mismatch,Info,EC-93810-001,5.4.14,31.4,Monica Araya
+2024-09-20 22:31:34,BAR-3330,Barcode Reader,Barcode scanner timeout,Warning,EC-93810-001,3.5.12,25.4,Juan Angola
+2025-04-15 19:05:01,OPT-6936,Optics,Optical sensor malfunction,Info,EC-93810-001,1.1.10,18.3,Mario Benedetti
+2025-05-08 11:50:18,REA-4973,Reagent Management,Reagent expired,Critical,EC-93810-001,3.1.11,22,Pablo Neruda
+2025-05-01 21:46:26,RAC-1284,Rack Handler,Rack motor jammed,Warning,EC-93810-001,1.8.7,33.6,Mario Benedetti
+2024-10-05 03:27:16,RAC-5636,Rack Handler,Rack sensor failure,Warning,EC-93810-001,3.9.8,15.9,Violeta Parra
+2025-08-05 23:31:22,OPT-2969,Optics,Optical sensor malfunction,Warning,EC-93810-001,4.6.15,30.8,Eduardo Galeano
+2025-05-12 20:45:14,REA-7868,Reagent Management,Reagent level low,Warning,EC-93810-001,5.7.6,34.4,Violeta Parra
+2024-10-22 22:10:46,BAR-9757,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,1.1.8,34.1,Pepe Mujica
+2025-06-09 06:47:37,RAC-6142,Rack Handler,Rack position error,Warning,EC-93810-001,3.4.4,30.6,Pablo Neruda
+2025-07-20 06:21:47,RAC-3171,Rack Handler,Rack motor jammed,Critical,EC-93810-001,2.0.14,32.8,Monica Araya
+2025-01-16 01:48:31,POW-7698,Power Supply,Battery backup failure,Critical,EC-93810-001,5.0.14,25,Mario Benedetti
+2024-09-11 06:48:08,SAM-8239,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,1.9.8,16.9,Pablo Neruda
+2025-04-29 06:32:35,FLU-6557,Fluidics,Flow rate out of range,Info,EC-93810-001,3.6.3,16.8,Pablo Neruda
+2024-10-17 18:42:55,OPT-3556,Optics,Wavelength calibration failed,Info,EC-93810-001,3.6.11,33.2,Monica Araya
+2024-12-01 02:52:55,REA-6129,Reagent Management,Reagent level low,Critical,EC-93810-001,4.7.18,27.7,Juan Angola
+2024-08-24 05:49:19,POW-8904,Power Supply,Power surge detected,Warning,EC-93810-001,5.8.18,15.9,Juan Angola
+2024-12-12 14:39:09,TEM-6008,Temperature Control,Temperature sensor error,Info,EC-93810-001,3.1.12,33.4,Pepe Mujica
+2024-12-31 03:54:14,POW-5314,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,4.0.17,33,Aline Prata
+2025-04-18 00:03:02,OPT-9041,Optics,Laser alignment error,Info,EC-93810-001,5.2.19,33.4,Gabriela Mistral
+2025-02-26 22:34:58,RAC-2926,Rack Handler,Rack position error,Warning,EC-93810-001,3.7.4,29.6,Eduardo Galeano
+2025-08-09 21:03:24,POW-7294,Power Supply,Power surge detected,Critical,EC-93810-001,3.6.10,22.5,Eduardo Galeano
+2025-06-06 22:31:43,FLU-8580,Fluidics,Flow rate out of range,Warning,EC-93810-001,2.3.17,20.3,Pepe Mujica
+2025-08-10 14:17:59,REA-5655,Reagent Management,Reagent bottle missing,Warning,EC-93810-001,3.6.13,29.4,Pablo Neruda
+2024-08-29 01:14:06,FLU-8638,Fluidics,Pump pressure adjustment needed,Info,EC-93810-001,1.1.3,23.4,Mario Benedetti
+2024-11-14 20:25:53,SAM-6926,Sample Handler,Sample vial missing,Info,EC-93810-001,1.9.20,23.6,Gabriela Mistral
+2025-03-25 06:49:50,POW-1878,Power Supply,Power surge detected,Warning,EC-93810-001,5.2.3,29.1,Oswaldo Guayasamin
+2025-03-29 08:33:14,OPT-9610,Optics,Light source intensity low,Critical,EC-93810-001,2.9.9,34,Eduardo Galeano
+2025-02-13 17:57:35,REA-8572,Reagent Management,Reagent level low,Critical,EC-93810-001,3.3.16,24.1,Aline Prata
+2025-06-22 00:19:48,POW-8308,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,4.4.4,28,Mario Benedetti
+2025-04-22 19:47:30,OPT-5061,Optics,Light source intensity low,Info,EC-93810-001,5.2.19,32.8,Oswaldo Guayasamin
+2024-12-26 02:30:19,REA-4168,Reagent Management,Reagent bottle missing,Warning,EC-93810-001,5.9.14,34.2,Monica Araya
+2025-07-15 18:29:48,RAC-3473,Rack Handler,Rack motor jammed,Info,EC-93810-001,2.4.7,17.8,Aline Prata
+2025-04-11 18:23:21,SAM-4214,Sample Handler,Sample probe clogged,Critical,EC-93810-001,5.2.12,25.4,Violeta Parra
+2025-01-19 03:20:40,TEM-8066,Temperature Control,Heater malfunction,Info,EC-93810-001,2.2.0,30.9,Monica Araya
+2025-07-21 15:52:04,TEM-9656,Temperature Control,Heater malfunction,Info,EC-93810-001,4.2.18,27.7,Mario Benedetti
+2025-02-11 05:04:48,REA-3539,Reagent Management,Reagent mixing error,Info,EC-93810-001,3.7.3,20.7,Mario Benedetti
+2025-07-19 09:57:08,POW-7302,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,1.2.4,21.2,Mario Benedetti
+2025-04-05 15:01:39,FLU-1391,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,3.4.12,30.7,Pablo Neruda
+2025-04-12 08:26:17,OPT-5358,Optics,Light source intensity low,Critical,EC-93810-001,2.3.15,28.8,Oswaldo Guayasamin
+2025-06-26 13:08:17,TEM-8550,Temperature Control,Cooling system failure,Info,EC-93810-001,5.6.17,31.4,Eduardo Galeano
+2024-11-04 10:03:44,FLU-4117,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,5.5.10,24.3,Pablo Neruda
+2025-03-07 14:34:25,SAM-3510,Sample Handler,Sample probe alignment error,Info,EC-93810-001,5.6.1,29.5,Oswaldo Guayasamin
+2025-08-06 00:44:01,TEM-7727,Temperature Control,Cooling system failure,Warning,EC-93810-001,3.1.19,29.3,Eduardo Galeano
+2025-01-03 01:02:03,REA-2485,Reagent Management,Reagent level low,Warning,EC-93810-001,2.7.13,25.5,Violeta Parra
+2024-10-05 11:01:11,TEM-7553,Temperature Control,Heater malfunction,Warning,EC-93810-001,2.0.11,27.4,Violeta Parra
+2025-02-21 10:01:25,OPT-1206,Optics,Laser alignment error,Critical,EC-93810-001,1.9.15,18.2,Gabriela Mistral
+2025-07-25 05:51:01,TEM-9013,Temperature Control,Cooling system failure,Warning,EC-93810-001,1.5.2,18,Pepe Mujica
+2025-01-05 06:17:12,POW-4472,Power Supply,Power supply overload,Info,EC-93810-001,2.3.4,18.4,Mario Benedetti
+2024-12-20 17:28:25,TEM-3868,Temperature Control,Temperature out of range,Warning,EC-93810-001,5.3.5,24.7,Pepe Mujica
+2024-12-18 23:01:16,OPT-9769,Optics,Laser alignment error,Critical,EC-93810-001,4.7.10,32.7,Pablo Neruda
+2024-08-25 14:18:54,RAC-1872,Rack Handler,Rack not detected,Info,EC-93810-001,4.6.14,33,Mario Benedetti
+2025-03-01 03:53:37,REA-7034,Reagent Management,Reagent mixing error,Warning,EC-93810-001,3.0.14,25.1,Mario Benedetti
+2025-07-31 20:44:59,SAM-2084,Sample Handler,Sample not aspirated,Info,EC-93810-001,1.7.9,20.4,Eduardo Galeano
+2024-12-06 07:16:39,BAR-1394,Barcode Reader,Barcode checksum mismatch,Info,EC-93810-001,1.7.8,21,Aline Prata
+2024-10-15 02:54:20,OPT-1200,Optics,Laser alignment error,Critical,EC-93810-001,5.2.3,32.8,Aline Prata
+2025-07-04 10:18:05,TEM-7322,Temperature Control,Cooling system failure,Critical,EC-93810-001,4.7.8,20,Mario Benedetti
+2025-06-25 17:43:01,TEM-2290,Temperature Control,Temperature sensor error,Critical,EC-93810-001,5.5.7,31.7,Aline Prata
+2025-05-14 04:41:09,OPT-7795,Optics,Light source intensity low,Critical,EC-93810-001,1.6.11,15.5,Gabriela Mistral
+2024-10-07 07:06:01,OPT-2840,Optics,Light source intensity low,Critical,EC-93810-001,1.1.12,19.7,Eduardo Galeano
+2025-06-20 21:16:00,REA-8472,Reagent Management,Reagent mixing error,Warning,EC-93810-001,5.1.13,24.2,Gabriela Mistral
+2025-08-12 19:57:29,RAC-4191,Rack Handler,Rack position error,Info,EC-93810-001,5.9.6,18.6,Mario Benedetti
+2024-09-18 00:14:00,SAM-7908,Sample Handler,Sample probe clogged,Warning,EC-93810-001,2.8.6,33.6,Aline Prata
+2025-03-28 02:32:55,TEM-6629,Temperature Control,Cooling system failure,Critical,EC-93810-001,4.6.19,19.9,Pablo Neruda
+2025-04-02 01:21:50,RAC-4444,Rack Handler,Rack sensor failure,Critical,EC-93810-001,1.1.10,17.2,Oswaldo Guayasamin
+2024-12-20 19:08:21,POW-7109,Power Supply,Battery backup failure,Warning,EC-93810-001,2.6.20,22,Juan Angola
+2025-01-18 05:06:24,POW-4481,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,4.8.0,30.1,Violeta Parra
+2024-10-01 21:55:39,BAR-8976,Barcode Reader,Unreadable barcode,Warning,EC-93810-001,1.3.16,17.5,Monica Araya
+2024-12-06 04:52:07,BAR-2155,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,2.8.7,23.3,Monica Araya
+2025-05-17 21:07:39,SAM-8244,Sample Handler,Sample probe clogged,Info,EC-93810-001,3.4.7,17.9,Gabriela Mistral
+2025-05-27 20:45:03,RAC-6989,Rack Handler,Rack not detected,Critical,EC-93810-001,4.4.15,33.5,Gabriela Mistral
+2025-08-04 03:41:49,RAC-5923,Rack Handler,Rack position error,Critical,EC-93810-001,2.3.4,23.5,Juan Angola
+2025-02-13 11:55:37,BAR-5774,Barcode Reader,Barcode misalignment,Critical,EC-93810-001,4.0.14,16.8,Juan Angola
+2025-07-01 03:55:00,OPT-6954,Optics,Wavelength calibration failed,Info,EC-93810-001,1.0.8,19.3,Monica Araya
+2024-12-19 09:39:58,SAM-6027,Sample Handler,Sample not aspirated,Info,EC-93810-001,5.2.20,19.4,Juan Angola
+2024-10-25 20:42:24,POW-3197,Power Supply,Battery backup failure,Info,EC-93810-001,5.7.18,18.7,Oswaldo Guayasamin
+2024-08-17 00:53:25,REA-2812,Reagent Management,Reagent mixing error,Warning,EC-93810-001,3.5.4,34.2,Oswaldo Guayasamin
+2024-11-03 05:44:21,BAR-3443,Barcode Reader,Barcode scanner timeout,Critical,EC-93810-001,1.2.10,22.4,Oswaldo Guayasamin
+2025-05-16 05:32:22,REA-6952,Reagent Management,Reagent expired,Info,EC-93810-001,1.8.0,16.6,Violeta Parra
+2025-02-11 06:34:08,SAM-8942,Sample Handler,Sample not aspirated,Critical,EC-93810-001,1.3.1,29.9,Juan Angola
+2025-02-09 13:50:26,POW-9646,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,1.1.12,22.4,Monica Araya
+2024-09-12 02:34:04,FLU-4972,Fluidics,Reservoir empty,Warning,EC-93810-001,5.6.17,24.7,Monica Araya
+2025-07-13 11:07:07,REA-7873,Reagent Management,Reagent expired,Warning,EC-93810-001,2.9.11,23.8,Pepe Mujica
+2025-06-25 23:55:34,FLU-6617,Fluidics,Fluid leak detected,Critical,EC-93810-001,5.1.9,34.2,Pablo Neruda
+2025-05-01 02:57:06,POW-4714,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,5.7.15,22.8,Gabriela Mistral
+2024-09-02 23:03:57,OPT-6894,Optics,Laser alignment error,Critical,EC-93810-001,5.1.0,29.9,Eduardo Galeano
+2025-01-01 21:33:54,SAM-5966,Sample Handler,Sample probe clogged,Warning,EC-93810-001,2.7.7,19.5,Pablo Neruda
+2025-04-26 19:33:15,POW-1487,Power Supply,Power surge detected,Info,EC-93810-001,3.7.9,15.9,Violeta Parra
+2024-12-17 04:29:06,OPT-1368,Optics,Wavelength calibration failed,Warning,EC-93810-001,5.3.17,24.1,Pepe Mujica
+2025-08-11 15:20:51,POW-1593,Power Supply,Power supply overload,Info,EC-93810-001,2.2.10,28.5,Violeta Parra
+2025-08-05 00:27:47,RAC-4166,Rack Handler,Rack sensor failure,Warning,EC-93810-001,4.4.12,24.1,Aline Prata
+2025-01-24 14:54:31,REA-5581,Reagent Management,Reagent bottle missing,Info,EC-93810-001,1.7.5,22.9,Pepe Mujica
+2025-08-07 08:56:23,REA-8752,Reagent Management,Reagent mixing error,Critical,EC-93810-001,4.9.9,27,Juan Angola
+2025-02-04 12:17:31,TEM-2292,Temperature Control,Temperature sensor error,Info,EC-93810-001,3.2.7,25.9,Juan Angola
+2024-09-25 15:58:45,REA-5631,Reagent Management,Reagent expired,Warning,EC-93810-001,5.3.2,33.5,Gabriela Mistral
+2025-06-22 01:49:37,SAM-9794,Sample Handler,Sample not aspirated,Warning,EC-93810-001,2.8.7,31.8,Oswaldo Guayasamin
+2025-03-05 10:33:31,REA-8383,Reagent Management,Reagent level low,Warning,EC-93810-001,2.6.16,20,Oswaldo Guayasamin
+2025-07-15 10:54:14,SAM-9566,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,3.8.9,20.5,Juan Angola
+2025-01-28 13:46:42,RAC-9280,Rack Handler,Rack not detected,Info,EC-93810-001,4.7.5,24.1,Pablo Neruda
+2025-07-09 10:13:55,POW-2536,Power Supply,Power surge detected,Info,EC-93810-001,3.4.19,16.7,Gabriela Mistral
+2025-06-10 04:00:58,RAC-9136,Rack Handler,Rack not detected,Critical,EC-93810-001,3.3.15,23.4,Oswaldo Guayasamin
+2025-01-01 00:09:24,BAR-2040,Barcode Reader,Barcode scanner timeout,Info,EC-93810-001,4.1.19,16.4,Juan Angola
+2025-03-14 09:54:30,SAM-7313,Sample Handler,Sample probe clogged,Critical,EC-93810-001,4.9.1,23.4,Monica Araya
+2025-06-28 22:50:01,TEM-4303,Temperature Control,Temperature sensor error,Critical,EC-93810-001,5.7.11,24.1,Pablo Neruda
+2025-04-05 12:13:06,FLU-2278,Fluidics,Reservoir empty,Warning,EC-93810-001,1.2.18,22.8,Gabriela Mistral
+2024-10-13 17:22:54,REA-3194,Reagent Management,Reagent bottle missing,Critical,EC-93810-001,5.3.3,18.4,Mario Benedetti
+2025-08-11 05:31:23,REA-5274,Reagent Management,Reagent level low,Warning,EC-93810-001,2.3.0,17.7,Violeta Parra
+2025-07-08 23:06:03,OPT-6137,Optics,Optical sensor malfunction,Warning,EC-93810-001,4.8.16,26.7,Pablo Neruda
+2025-07-29 23:33:19,TEM-1415,Temperature Control,Temperature sensor error,Critical,EC-93810-001,3.4.13,19.3,Pablo Neruda
+2024-11-26 15:50:27,BAR-5593,Barcode Reader,Barcode misalignment,Critical,EC-93810-001,4.4.9,18,Pepe Mujica
+2025-07-01 08:59:22,OPT-4478,Optics,Light source intensity low,Info,EC-93810-001,2.9.5,32.1,Pepe Mujica
+2024-12-23 08:27:38,FLU-4045,Fluidics,Flow rate out of range,Critical,EC-93810-001,5.5.20,24.6,Eduardo Galeano
+2025-03-30 20:20:19,FLU-5005,Fluidics,Reservoir empty,Critical,EC-93810-001,5.4.4,22.2,Eduardo Galeano
+2025-01-24 18:34:41,POW-5234,Power Supply,Power supply overload,Critical,EC-93810-001,5.5.17,18,Aline Prata
+2025-06-15 05:18:47,OPT-7511,Optics,Laser alignment error,Critical,EC-93810-001,2.0.11,17.1,Pepe Mujica
+2025-04-20 14:21:15,REA-3183,Reagent Management,Reagent level low,Critical,EC-93810-001,2.3.11,27.7,Juan Angola
+2024-12-30 11:49:03,BAR-8705,Barcode Reader,Barcode checksum mismatch,Warning,EC-93810-001,1.1.20,24.1,Gabriela Mistral
+2024-11-02 19:22:04,SAM-4271,Sample Handler,Sample vial missing,Info,EC-93810-001,3.8.19,24.2,Pablo Neruda
+2025-04-03 03:54:28,POW-1601,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,3.3.12,19.3,Aline Prata
+2025-04-29 20:27:26,FLU-4040,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,5.3.17,19.5,Aline Prata
+2025-08-06 09:04:13,FLU-8971,Fluidics,Reservoir empty,Info,EC-93810-001,2.1.10,31.4,Violeta Parra
+2025-01-27 14:30:04,REA-5693,Reagent Management,Reagent level low,Critical,EC-93810-001,2.1.19,29.9,Pepe Mujica
+2025-02-11 17:04:58,TEM-4580,Temperature Control,Temperature out of range,Warning,EC-93810-001,3.9.11,20,Violeta Parra
+2025-08-01 06:32:40,FLU-1412,Fluidics,Pump pressure adjustment needed,Info,EC-93810-001,5.7.5,30.1,Oswaldo Guayasamin
+2024-09-25 15:28:49,OPT-7167,Optics,Laser alignment error,Warning,EC-93810-001,2.2.5,22.9,Pepe Mujica
+2025-01-16 22:08:45,BAR-4158,Barcode Reader,Barcode misalignment,Info,EC-93810-001,3.2.13,23.6,Pepe Mujica
+2024-10-17 09:09:39,TEM-9157,Temperature Control,Temperature out of range,Info,EC-93810-001,2.8.20,32.4,Juan Angola
+2024-09-24 16:55:19,FLU-5595,Fluidics,Reservoir empty,Warning,EC-93810-001,1.7.6,23.7,Violeta Parra
+2025-03-25 23:20:34,OPT-1128,Optics,Wavelength calibration failed,Info,EC-93810-001,2.4.4,32.2,Pepe Mujica
+2024-12-10 15:26:43,OPT-9161,Optics,Laser alignment error,Critical,EC-93810-001,4.0.10,26.6,Oswaldo Guayasamin
+2024-12-07 07:50:33,POW-7313,Power Supply,Power supply overload,Info,EC-93810-001,2.2.0,24.4,Monica Araya
+2024-10-30 00:54:15,TEM-6201,Temperature Control,Temperature sensor error,Critical,EC-93810-001,4.7.17,20.6,Oswaldo Guayasamin
+2025-07-18 06:21:08,FLU-4978,Fluidics,Flow rate out of range,Warning,EC-93810-001,5.3.6,17.5,Pablo Neruda
+2025-02-08 07:58:06,RAC-7647,Rack Handler,Rack sensor failure,Warning,EC-93810-001,3.2.3,21.9,Pablo Neruda
+2024-12-08 09:51:15,BAR-8636,Barcode Reader,Unreadable barcode,Info,EC-93810-001,1.0.18,32.7,Pepe Mujica
+2025-07-24 02:08:18,OPT-3781,Optics,Laser alignment error,Info,EC-93810-001,4.6.16,16.4,Monica Araya
+2025-07-14 19:09:47,FLU-9642,Fluidics,Fluid leak detected,Warning,EC-93810-001,3.2.5,33.5,Juan Angola
+2025-02-28 10:41:15,TEM-9800,Temperature Control,Heater malfunction,Info,EC-93810-001,1.8.6,25.8,Gabriela Mistral
+2024-12-11 17:18:25,SAM-5551,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,3.9.5,16.9,Oswaldo Guayasamin
+2024-10-25 00:22:14,SAM-5859,Sample Handler,Sample vial missing,Info,EC-93810-001,4.7.2,29.9,Monica Araya
+2025-08-02 06:19:04,POW-8432,Power Supply,Battery backup failure,Info,EC-93810-001,2.3.19,18.2,Mario Benedetti
+2024-12-01 09:10:23,SAM-4271,Sample Handler,Sample not aspirated,Warning,EC-93810-001,5.5.9,29.3,Gabriela Mistral
+2025-05-21 13:30:00,FLU-1991,Fluidics,Reservoir empty,Info,EC-93810-001,4.4.19,21.4,Mario Benedetti
+2024-12-28 12:43:53,RAC-6033,Rack Handler,Rack position error,Warning,EC-93810-001,3.0.0,18,Pepe Mujica
+2025-06-19 09:30:57,POW-6251,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,5.4.10,26.9,Violeta Parra
+2025-02-13 12:58:02,BAR-9235,Barcode Reader,Barcode checksum mismatch,Warning,EC-93810-001,1.4.7,32.3,Violeta Parra
+2024-11-06 09:39:39,FLU-2129,Fluidics,Fluid leak detected,Critical,EC-93810-001,1.2.15,31.4,Violeta Parra
+2025-01-05 00:34:51,POW-7797,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,3.2.14,15.7,Aline Prata
+2025-04-24 17:27:38,REA-4032,Reagent Management,Reagent expired,Info,EC-93810-001,3.1.3,29.5,Pablo Neruda
+2024-11-05 21:15:20,FLU-4000,Fluidics,Fluid leak detected,Info,EC-93810-001,2.2.5,31,Mario Benedetti
+2025-04-18 08:40:38,SAM-5102,Sample Handler,Sample vial missing,Info,EC-93810-001,1.1.17,21.1,Gabriela Mistral
+2025-02-07 13:49:58,RAC-8317,Rack Handler,Rack position error,Warning,EC-93810-001,4.4.18,29.4,Pepe Mujica
+2025-03-14 12:20:41,SAM-1667,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,4.2.16,18.4,Pepe Mujica
+2025-03-23 05:34:42,FLU-7315,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,2.8.12,32.4,Mario Benedetti
+2025-05-28 00:18:43,REA-7870,Reagent Management,Reagent expired,Info,EC-93810-001,2.1.17,32.4,Mario Benedetti
+2025-05-17 11:52:00,POW-4463,Power Supply,Power surge detected,Info,EC-93810-001,2.8.19,24.1,Violeta Parra
+2024-09-16 00:40:49,POW-6495,Power Supply,Power surge detected,Critical,EC-93810-001,5.4.17,27.5,Oswaldo Guayasamin
+2025-05-17 16:49:07,TEM-2854,Temperature Control,Heater malfunction,Warning,EC-93810-001,1.4.4,26.3,Eduardo Galeano
+2024-10-07 18:41:10,BAR-4208,Barcode Reader,Barcode scanner timeout,Info,EC-93810-001,2.5.2,28.6,Pablo Neruda
+2025-02-05 02:56:40,REA-3391,Reagent Management,Reagent bottle missing,Critical,EC-93810-001,5.4.6,17.9,Pepe Mujica
+2024-10-28 11:45:42,TEM-8149,Temperature Control,Temperature out of range,Critical,EC-93810-001,4.2.12,19,Mario Benedetti
+2025-07-31 05:21:46,SAM-8399,Sample Handler,Sample probe alignment error,Info,EC-93810-001,2.1.12,27.3,Juan Angola
+2024-11-13 23:05:17,SAM-6308,Sample Handler,Sample not aspirated,Info,EC-93810-001,2.2.15,33.2,Gabriela Mistral
+2024-10-29 12:38:20,REA-9498,Reagent Management,Reagent bottle missing,Warning,EC-93810-001,3.1.19,23.9,Aline Prata
+2024-12-03 22:00:10,TEM-1515,Temperature Control,Temperature out of range,Warning,EC-93810-001,2.7.10,15.6,Juan Angola
+2024-09-26 20:22:38,OPT-7384,Optics,Wavelength calibration failed,Info,EC-93810-001,1.3.16,28.7,Monica Araya
+2025-03-31 18:02:44,TEM-9529,Temperature Control,Temperature sensor error,Info,EC-93810-001,3.3.7,30.1,Mario Benedetti
+2025-04-17 03:32:42,RAC-9674,Rack Handler,Rack position error,Warning,EC-93810-001,5.7.16,21.5,Oswaldo Guayasamin
+2024-08-17 08:24:16,RAC-3214,Rack Handler,Rack not detected,Warning,EC-93810-001,5.6.5,20.7,Mario Benedetti
+2024-10-07 19:14:39,RAC-8943,Rack Handler,Rack motor jammed,Warning,EC-93810-001,4.8.13,24.4,Aline Prata
+2025-04-15 04:51:50,BAR-6205,Barcode Reader,Barcode misalignment,Info,EC-93810-001,3.6.6,26.1,Monica Araya
+2025-02-13 11:41:00,SAM-4496,Sample Handler,Sample vial missing,Warning,EC-93810-001,3.0.12,31.9,Monica Araya
+2025-01-18 20:57:55,FLU-6974,Fluidics,Pump pressure adjustment needed,Warning,EC-93810-001,4.0.19,20.8,Pepe Mujica
+2024-09-16 04:53:04,REA-7164,Reagent Management,Reagent expired,Critical,EC-93810-001,2.6.3,19.3,Eduardo Galeano
+2024-08-27 17:45:30,OPT-5281,Optics,Light source intensity low,Warning,EC-93810-001,1.8.3,30.8,Pepe Mujica
+2024-08-23 08:03:10,RAC-7585,Rack Handler,Rack not detected,Critical,EC-93810-001,1.5.20,28.8,Mario Benedetti
+2024-12-15 02:59:50,FLU-6216,Fluidics,Pump pressure adjustment needed,Warning,EC-93810-001,3.8.11,17.7,Eduardo Galeano
+2025-08-03 22:10:27,SAM-4076,Sample Handler,Sample probe clogged,Critical,EC-93810-001,1.9.11,34.5,Monica Araya
+2025-07-06 07:30:40,OPT-1861,Optics,Laser alignment error,Info,EC-93810-001,3.8.20,30.9,Violeta Parra
+2024-12-23 11:22:40,REA-5144,Reagent Management,Reagent mixing error,Warning,EC-93810-001,2.9.19,21.1,Oswaldo Guayasamin
+2025-02-04 06:43:42,RAC-9374,Rack Handler,Rack position error,Critical,EC-93810-001,2.3.17,24,Juan Angola
+2024-09-11 23:14:10,OPT-7006,Optics,Laser alignment error,Info,EC-93810-001,2.0.6,18.5,Gabriela Mistral
+2025-05-24 18:36:00,POW-2957,Power Supply,Battery backup failure,Critical,EC-93810-001,5.7.5,15.7,Pablo Neruda
+2024-12-30 12:16:54,REA-3936,Reagent Management,Reagent expired,Warning,EC-93810-001,1.9.18,33.4,Pepe Mujica
+2025-08-03 03:55:39,TEM-7355,Temperature Control,Temperature sensor error,Critical,EC-93810-001,4.4.14,29.9,Monica Araya
+2025-01-21 03:02:45,REA-5033,Reagent Management,Reagent level low,Critical,EC-93810-001,1.3.2,26.6,Violeta Parra
+2025-07-04 17:32:23,SAM-7157,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,2.9.13,33.9,Mario Benedetti
+2025-07-14 18:10:17,TEM-7527,Temperature Control,Temperature sensor error,Info,EC-93810-001,1.4.3,35,Mario Benedetti
+2024-12-03 08:03:27,REA-1106,Reagent Management,Reagent mixing error,Warning,EC-93810-001,4.6.5,27.6,Aline Prata
+2024-12-23 18:57:58,TEM-1238,Temperature Control,Temperature sensor error,Warning,EC-93810-001,5.9.6,19.7,Pepe Mujica
+2024-12-02 12:59:10,OPT-2151,Optics,Wavelength calibration failed,Info,EC-93810-001,1.7.0,29.9,Juan Angola
+2025-04-12 10:36:46,REA-2583,Reagent Management,Reagent level low,Warning,EC-93810-001,5.1.12,15.3,Eduardo Galeano
+2025-01-03 03:09:01,FLU-4796,Fluidics,Flow rate out of range,Warning,EC-93810-001,2.2.6,30.4,Juan Angola
+2025-06-05 13:46:47,FLU-4234,Fluidics,Flow rate out of range,Info,EC-93810-001,4.5.16,34.1,Aline Prata
+2024-12-16 04:59:19,FLU-5457,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,5.4.18,21.6,Oswaldo Guayasamin
+2025-07-04 00:10:57,RAC-3407,Rack Handler,Rack sensor failure,Info,EC-93810-001,5.6.3,21.4,Gabriela Mistral
+2024-12-24 12:33:06,RAC-1086,Rack Handler,Rack sensor failure,Warning,EC-93810-001,2.4.19,23.6,Pablo Neruda
+2025-07-19 02:00:10,RAC-1908,Rack Handler,Rack sensor failure,Critical,EC-93810-001,5.4.10,23.6,Eduardo Galeano
+2025-01-16 20:06:47,BAR-9680,Barcode Reader,Barcode scanner timeout,Warning,EC-93810-001,4.6.20,16.6,Aline Prata
+2024-10-09 03:14:46,FLU-3092,Fluidics,Pump pressure adjustment needed,Info,EC-93810-001,2.1.0,22,Violeta Parra
+2025-05-23 20:26:50,FLU-7373,Fluidics,Fluid leak detected,Warning,EC-93810-001,3.3.2,29.5,Pepe Mujica
+2025-03-25 01:12:43,SAM-7473,Sample Handler,Sample not aspirated,Warning,EC-93810-001,4.0.17,28.1,Violeta Parra
+2025-01-22 14:22:56,SAM-1732,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,1.6.12,15.4,Eduardo Galeano
+2025-06-19 07:02:34,FLU-7807,Fluidics,Pump pressure adjustment needed,Info,EC-93810-001,4.5.5,28.8,Monica Araya
+2024-12-04 11:30:40,OPT-2925,Optics,Optical sensor malfunction,Critical,EC-93810-001,5.4.18,23.5,Violeta Parra
+2024-09-18 00:19:31,BAR-4813,Barcode Reader,Barcode scanner timeout,Warning,EC-93810-001,3.2.8,34.8,Eduardo Galeano
+2024-12-30 02:15:02,TEM-6591,Temperature Control,Heater malfunction,Warning,EC-93810-001,3.6.17,23.7,Mario Benedetti
+2025-03-27 03:23:31,REA-8311,Reagent Management,Reagent level low,Critical,EC-93810-001,2.3.4,30.1,Gabriela Mistral
+2025-03-03 12:46:36,TEM-3810,Temperature Control,Heater malfunction,Info,EC-93810-001,1.1.16,17.5,Aline Prata
+2024-10-01 10:43:24,OPT-8993,Optics,Wavelength calibration failed,Warning,EC-93810-001,1.4.5,31.1,Eduardo Galeano
+2024-09-16 23:19:09,REA-2298,Reagent Management,Reagent expired,Warning,EC-93810-001,1.1.0,26.3,Eduardo Galeano
+2025-07-23 09:20:02,FLU-6025,Fluidics,Reservoir empty,Warning,EC-93810-001,2.9.8,16.9,Aline Prata
+2024-11-25 10:31:56,SAM-5807,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,2.9.14,25.8,Pepe Mujica
+2025-07-06 02:36:57,TEM-4052,Temperature Control,Cooling system failure,Warning,EC-93810-001,3.0.11,34.4,Aline Prata
+2025-07-26 09:24:28,POW-8132,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,2.6.11,25,Monica Araya
+2025-07-24 17:04:30,TEM-9669,Temperature Control,Heater malfunction,Warning,EC-93810-001,3.2.2,22.1,Eduardo Galeano
+2024-09-24 05:26:51,POW-9332,Power Supply,Power supply overload,Info,EC-93810-001,4.2.11,18.4,Mario Benedetti
+2024-12-31 18:24:57,TEM-3900,Temperature Control,Temperature sensor error,Critical,EC-93810-001,1.7.5,31.2,Juan Angola
+2025-07-14 12:38:52,RAC-1700,Rack Handler,Rack position error,Warning,EC-93810-001,5.4.6,24.6,Gabriela Mistral
+2024-11-28 03:21:29,BAR-8914,Barcode Reader,Barcode misalignment,Info,EC-93810-001,2.4.4,20.2,Pablo Neruda
+2024-11-01 09:49:16,RAC-9981,Rack Handler,Rack not detected,Critical,EC-93810-001,3.2.15,18.8,Gabriela Mistral
+2024-08-17 12:48:58,OPT-4213,Optics,Optical sensor malfunction,Critical,EC-93810-001,5.0.4,16.8,Oswaldo Guayasamin
+2025-03-13 01:31:38,RAC-3257,Rack Handler,Rack position error,Warning,EC-93810-001,4.3.1,20.1,Pepe Mujica
+2024-09-02 04:40:32,SAM-5574,Sample Handler,Sample probe clogged,Warning,EC-93810-001,3.0.5,15.3,Eduardo Galeano
+2025-02-02 18:51:22,SAM-4114,Sample Handler,Sample vial missing,Critical,EC-93810-001,5.7.9,21,Oswaldo Guayasamin
+2024-11-23 15:56:17,OPT-9767,Optics,Light source intensity low,Critical,EC-93810-001,2.0.5,18.7,Juan Angola
+2025-06-29 01:20:48,RAC-3733,Rack Handler,Rack sensor failure,Info,EC-93810-001,4.2.20,15.1,Pepe Mujica
+2024-09-05 23:30:33,RAC-7772,Rack Handler,Rack sensor failure,Info,EC-93810-001,5.1.17,32.2,Monica Araya
+2024-12-13 15:32:13,BAR-2603,Barcode Reader,Unreadable barcode,Info,EC-93810-001,5.4.19,29.2,Monica Araya
+2025-05-05 02:05:32,TEM-2958,Temperature Control,Temperature sensor error,Warning,EC-93810-001,1.6.19,25.4,Gabriela Mistral
+2025-06-26 17:01:19,POW-1400,Power Supply,Power supply overload,Critical,EC-93810-001,5.6.9,26,Oswaldo Guayasamin
+2025-05-10 01:01:21,REA-6748,Reagent Management,Reagent expired,Info,EC-93810-001,5.8.11,32.7,Aline Prata
+2025-01-21 21:14:56,OPT-2767,Optics,Laser alignment error,Critical,EC-93810-001,1.7.6,20.2,Juan Angola
+2024-11-07 21:01:22,REA-1482,Reagent Management,Reagent mixing error,Info,EC-93810-001,2.6.10,21.4,Gabriela Mistral
+2024-09-26 10:30:05,TEM-4719,Temperature Control,Temperature out of range,Critical,EC-93810-001,1.4.0,31.3,Violeta Parra
+2024-11-21 06:33:00,RAC-1497,Rack Handler,Rack not detected,Info,EC-93810-001,1.7.20,26.8,Monica Araya
+2024-09-23 02:19:44,OPT-9408,Optics,Optical sensor malfunction,Critical,EC-93810-001,2.7.3,26,Juan Angola
+2025-01-11 20:49:17,OPT-3485,Optics,Laser alignment error,Warning,EC-93810-001,5.6.14,18.6,Eduardo Galeano
+2025-02-02 03:35:14,OPT-3523,Optics,Light source intensity low,Critical,EC-93810-001,3.6.8,19.8,Aline Prata
+2025-08-08 12:50:03,RAC-2632,Rack Handler,Rack position error,Warning,EC-93810-001,4.9.2,21.1,Pepe Mujica
+2025-04-13 11:11:00,RAC-7376,Rack Handler,Rack position error,Critical,EC-93810-001,1.7.19,30.2,Juan Angola
+2024-11-09 02:49:08,REA-3936,Reagent Management,Reagent level low,Warning,EC-93810-001,1.6.11,31.4,Violeta Parra
+2024-12-29 01:24:27,POW-8713,Power Supply,Power surge detected,Critical,EC-93810-001,4.4.5,15.9,Pablo Neruda
+2024-10-05 02:46:22,FLU-8770,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,1.2.19,27.6,Oswaldo Guayasamin
+2024-09-05 16:42:07,POW-6160,Power Supply,Battery backup failure,Critical,EC-93810-001,2.9.6,19.8,Eduardo Galeano
+2025-03-27 16:05:35,TEM-9197,Temperature Control,Temperature out of range,Warning,EC-93810-001,4.7.11,22.5,Eduardo Galeano
+2024-09-19 05:07:35,FLU-6204,Fluidics,Fluid leak detected,Critical,EC-93810-001,1.3.2,28.1,Pablo Neruda
+2025-03-18 12:21:49,OPT-8114,Optics,Light source intensity low,Info,EC-93810-001,4.6.14,21.2,Juan Angola
+2025-04-28 03:20:45,SAM-9872,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,1.6.3,15.9,Pablo Neruda
+2025-07-12 05:24:30,OPT-8661,Optics,Laser alignment error,Warning,EC-93810-001,3.4.17,34.5,Gabriela Mistral
+2025-04-07 18:40:17,RAC-7542,Rack Handler,Rack not detected,Info,EC-93810-001,2.6.9,21.8,Aline Prata
+2025-07-01 22:41:46,RAC-9550,Rack Handler,Rack not detected,Info,EC-93810-001,3.4.14,33,Gabriela Mistral
+2024-12-25 07:33:32,TEM-9047,Temperature Control,Temperature out of range,Critical,EC-93810-001,4.3.18,21.6,Eduardo Galeano
+2025-01-02 17:00:22,TEM-4824,Temperature Control,Temperature sensor error,Info,EC-93810-001,2.3.13,26.1,Aline Prata
+2024-11-15 07:16:44,FLU-1818,Fluidics,Flow rate out of range,Info,EC-93810-001,3.0.15,28.1,Violeta Parra
+2025-05-13 17:00:44,RAC-3852,Rack Handler,Rack motor jammed,Info,EC-93810-001,1.9.4,26.8,Mario Benedetti
+2025-07-03 12:48:11,OPT-8029,Optics,Laser alignment error,Info,EC-93810-001,5.6.16,15.2,Pepe Mujica
+2024-08-17 13:26:04,POW-6060,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,3.6.3,31.2,Aline Prata
+2024-09-01 01:46:06,REA-8347,Reagent Management,Reagent expired,Critical,EC-93810-001,5.9.12,24.4,Pablo Neruda
+2025-02-25 09:38:58,POW-3252,Power Supply,Battery backup failure,Warning,EC-93810-001,1.4.11,23.1,Aline Prata
+2025-06-02 02:52:25,SAM-2370,Sample Handler,Sample probe clogged,Warning,EC-93810-001,5.0.3,21.1,Mario Benedetti
+2025-01-31 20:48:30,BAR-2399,Barcode Reader,Unreadable barcode,Info,EC-93810-001,3.9.4,34.2,Eduardo Galeano
+2025-04-29 08:32:45,POW-4900,Power Supply,Power supply overload,Warning,EC-93810-001,3.9.5,30.2,Oswaldo Guayasamin
+2025-05-02 10:24:40,POW-6236,Power Supply,Battery backup failure,Info,EC-93810-001,3.7.5,23.5,Eduardo Galeano
+2025-03-08 11:54:55,POW-3128,Power Supply,Power supply overload,Info,EC-93810-001,4.6.8,34.1,Pepe Mujica
+2025-07-21 14:54:30,BAR-3878,Barcode Reader,Barcode misalignment,Critical,EC-93810-001,4.6.5,16,Gabriela Mistral
+2025-01-23 19:16:56,REA-2479,Reagent Management,Reagent expired,Warning,EC-93810-001,3.4.12,24,Violeta Parra
+2025-01-09 03:10:40,TEM-2413,Temperature Control,Cooling system failure,Critical,EC-93810-001,5.2.0,26.5,Monica Araya
+2025-03-21 23:11:27,FLU-6782,Fluidics,Pump pressure adjustment needed,Warning,EC-93810-001,2.7.18,28.3,Pablo Neruda
+2025-03-21 02:58:15,OPT-7531,Optics,Light source intensity low,Info,EC-93810-001,5.7.1,26,Monica Araya
+2025-07-13 16:57:24,FLU-3236,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,5.4.18,34.6,Gabriela Mistral
+2025-02-04 09:42:04,OPT-4455,Optics,Laser alignment error,Info,EC-93810-001,2.4.17,18.2,Eduardo Galeano
+2025-02-12 09:13:20,BAR-7316,Barcode Reader,Barcode checksum mismatch,Info,EC-93810-001,1.1.16,19.1,Juan Angola
+2025-05-08 22:46:05,BAR-4520,Barcode Reader,Barcode scanner timeout,Critical,EC-93810-001,3.0.13,19.5,Juan Angola
+2025-02-10 18:09:48,REA-9062,Reagent Management,Reagent expired,Warning,EC-93810-001,5.9.18,26.6,Mario Benedetti
+2024-09-07 05:07:35,SAM-2386,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,2.6.8,23.6,Pepe Mujica
+2024-10-04 10:02:11,OPT-7684,Optics,Wavelength calibration failed,Critical,EC-93810-001,3.2.16,17.9,Pepe Mujica
+2024-12-29 11:13:58,RAC-9344,Rack Handler,Rack position error,Info,EC-93810-001,2.1.10,30.3,Pablo Neruda
+2025-02-15 06:56:25,POW-4282,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,4.4.3,23,Aline Prata
+2025-05-12 10:34:48,SAM-5314,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,1.1.18,16.4,Oswaldo Guayasamin
+2025-04-30 15:53:34,TEM-1517,Temperature Control,Heater malfunction,Critical,EC-93810-001,3.8.11,24.9,Pepe Mujica
+2025-08-01 21:23:42,POW-7081,Power Supply,Power surge detected,Info,EC-93810-001,3.0.13,17,Juan Angola
+2024-12-24 12:16:32,SAM-6652,Sample Handler,Sample probe clogged,Warning,EC-93810-001,2.4.11,15.5,Pepe Mujica
+2025-03-29 08:58:45,RAC-1803,Rack Handler,Rack motor jammed,Critical,EC-93810-001,2.3.16,20.6,Pablo Neruda
+2024-12-14 15:32:50,REA-6919,Reagent Management,Reagent expired,Critical,EC-93810-001,2.9.20,31.5,Aline Prata
+2025-07-21 23:03:31,POW-4780,Power Supply,Power supply overload,Warning,EC-93810-001,5.5.14,19.6,Gabriela Mistral
+2024-09-12 20:38:10,TEM-3582,Temperature Control,Cooling system failure,Warning,EC-93810-001,3.5.7,28.2,Gabriela Mistral
+2025-01-08 12:36:10,SAM-2067,Sample Handler,Sample probe clogged,Warning,EC-93810-001,3.1.8,33.8,Pablo Neruda
+2024-12-08 04:57:38,POW-9003,Power Supply,Battery backup failure,Info,EC-93810-001,3.9.17,24.9,Pablo Neruda
+2025-03-09 19:26:40,FLU-1042,Fluidics,Reservoir empty,Warning,EC-93810-001,5.7.6,18.3,Monica Araya
+2025-01-11 13:19:45,RAC-5097,Rack Handler,Rack position error,Warning,EC-93810-001,3.0.11,25.6,Monica Araya
+2025-01-01 15:31:24,OPT-7561,Optics,Laser alignment error,Info,EC-93810-001,3.1.11,17.7,Eduardo Galeano
+2025-05-21 13:37:44,FLU-4617,Fluidics,Flow rate out of range,Warning,EC-93810-001,1.0.20,34.3,Monica Araya
+2024-12-07 23:35:55,SAM-9518,Sample Handler,Sample vial missing,Critical,EC-93810-001,2.0.16,18.3,Juan Angola
+2024-10-14 05:29:51,SAM-8459,Sample Handler,Sample vial missing,Warning,EC-93810-001,2.3.0,28.4,Pepe Mujica
+2025-03-20 02:39:24,BAR-4993,Barcode Reader,Unreadable barcode,Critical,EC-93810-001,1.2.8,25.2,Gabriela Mistral
+2025-02-22 04:33:12,SAM-9888,Sample Handler,Sample vial missing,Warning,EC-93810-001,3.3.0,15.3,Pepe Mujica
+2024-10-05 23:08:00,POW-5842,Power Supply,Power surge detected,Info,EC-93810-001,5.2.8,34.7,Oswaldo Guayasamin
+2025-02-07 10:08:02,REA-9974,Reagent Management,Reagent mixing error,Warning,EC-93810-001,1.3.10,31.2,Pepe Mujica
+2024-11-09 14:59:06,SAM-4102,Sample Handler,Sample probe clogged,Critical,EC-93810-001,5.9.15,34.1,Oswaldo Guayasamin
+2024-11-14 21:34:35,TEM-9296,Temperature Control,Heater malfunction,Info,EC-93810-001,5.8.7,15.1,Aline Prata
+2025-02-15 12:53:34,RAC-5319,Rack Handler,Rack motor jammed,Info,EC-93810-001,4.3.0,32.9,Gabriela Mistral
+2025-05-26 01:30:02,POW-6837,Power Supply,Battery backup failure,Critical,EC-93810-001,4.0.8,29,Monica Araya
+2025-03-06 08:31:59,TEM-6633,Temperature Control,Cooling system failure,Info,EC-93810-001,1.4.7,26.9,Mario Benedetti
+2024-09-11 00:32:59,SAM-5625,Sample Handler,Sample probe clogged,Critical,EC-93810-001,3.6.19,20.6,Gabriela Mistral
+2025-01-17 10:34:00,FLU-7879,Fluidics,Flow rate out of range,Info,EC-93810-001,5.4.3,26.3,Violeta Parra
+2025-04-05 18:12:19,RAC-6933,Rack Handler,Rack position error,Info,EC-93810-001,3.6.19,33.1,Mario Benedetti
+2024-11-15 15:12:24,FLU-8494,Fluidics,Fluid leak detected,Warning,EC-93810-001,3.7.14,15.8,Eduardo Galeano
+2024-09-06 03:28:56,BAR-3397,Barcode Reader,Barcode scanner timeout,Critical,EC-93810-001,1.1.6,20.3,Pepe Mujica
+2025-07-10 14:18:58,TEM-7377,Temperature Control,Temperature sensor error,Critical,EC-93810-001,3.6.1,30.1,Mario Benedetti
+2024-12-17 17:49:47,BAR-1363,Barcode Reader,Barcode scanner timeout,Warning,EC-93810-001,2.6.19,28.9,Pepe Mujica
+2025-07-20 18:37:40,OPT-4532,Optics,Light source intensity low,Warning,EC-93810-001,2.0.3,27.9,Gabriela Mistral
+2024-10-11 15:12:36,RAC-3338,Rack Handler,Rack sensor failure,Info,EC-93810-001,4.6.14,18.7,Eduardo Galeano
+2025-06-14 04:19:12,TEM-3464,Temperature Control,Temperature sensor error,Info,EC-93810-001,2.5.3,29.7,Eduardo Galeano
+2024-09-25 16:57:30,BAR-2856,Barcode Reader,Barcode scanner timeout,Critical,EC-93810-001,1.3.18,15.3,Eduardo Galeano
+2024-08-25 10:04:39,SAM-6119,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,4.5.8,21.6,Mario Benedetti
+2025-07-17 22:13:20,FLU-4892,Fluidics,Fluid leak detected,Critical,EC-93810-001,1.5.20,31.9,Aline Prata
+2024-11-14 02:49:25,TEM-6120,Temperature Control,Heater malfunction,Info,EC-93810-001,2.1.13,33.7,Pablo Neruda
+2025-04-06 05:54:07,REA-7126,Reagent Management,Reagent bottle missing,Warning,EC-93810-001,1.9.9,34,Monica Araya
+2025-05-25 00:45:21,BAR-4893,Barcode Reader,Barcode checksum mismatch,Warning,EC-93810-001,2.4.9,20.3,Oswaldo Guayasamin
+2025-05-13 17:06:41,TEM-3440,Temperature Control,Heater malfunction,Info,EC-93810-001,1.1.18,24.3,Monica Araya
+2024-09-21 00:03:09,BAR-4001,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,4.0.3,22.5,Pablo Neruda
+2024-10-29 13:10:35,REA-6492,Reagent Management,Reagent mixing error,Critical,EC-93810-001,2.4.20,22.6,Eduardo Galeano
+2025-08-04 09:39:14,TEM-6535,Temperature Control,Temperature sensor error,Warning,EC-93810-001,4.7.0,32.1,Gabriela Mistral
+2025-05-28 20:49:03,POW-3168,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,4.1.3,33.1,Oswaldo Guayasamin
+2025-04-15 23:15:47,RAC-2324,Rack Handler,Rack motor jammed,Critical,EC-93810-001,5.6.18,27.1,Gabriela Mistral
+2025-05-22 08:11:07,BAR-6012,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,3.1.11,20.9,Pepe Mujica
+2025-08-01 17:50:56,RAC-3846,Rack Handler,Rack position error,Info,EC-93810-001,5.1.19,26.5,Juan Angola
+2024-08-23 06:55:25,OPT-1763,Optics,Wavelength calibration failed,Info,EC-93810-001,5.9.7,29.2,Aline Prata
+2024-11-29 09:12:33,POW-5449,Power Supply,Voltage fluctuation detected,Warning,EC-93810-001,1.1.13,31.1,Gabriela Mistral
+2024-09-07 05:16:55,REA-1104,Reagent Management,Reagent level low,Critical,EC-93810-001,3.8.18,19,Aline Prata
+2024-12-25 07:38:01,FLU-8087,Fluidics,Flow rate out of range,Warning,EC-93810-001,4.9.11,18.9,Eduardo Galeano
+2024-12-10 19:58:10,RAC-5331,Rack Handler,Rack position error,Info,EC-93810-001,2.5.3,21.9,Monica Araya
+2025-07-02 01:58:25,OPT-5691,Optics,Wavelength calibration failed,Info,EC-93810-001,4.1.4,22.8,Juan Angola
+2025-06-18 00:51:10,BAR-2235,Barcode Reader,Barcode misalignment,Info,EC-93810-001,1.7.19,32.2,Eduardo Galeano
+2025-03-29 13:59:45,BAR-9252,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,2.8.2,17.9,Oswaldo Guayasamin
+2025-07-03 18:28:21,FLU-2546,Fluidics,Pump pressure adjustment needed,Warning,EC-93810-001,4.4.2,33.9,Aline Prata
+2025-05-27 12:21:26,TEM-2880,Temperature Control,Temperature out of range,Info,EC-93810-001,2.2.9,20.3,Eduardo Galeano
+2025-08-01 19:18:45,TEM-4539,Temperature Control,Heater malfunction,Info,EC-93810-001,4.0.20,32.5,Oswaldo Guayasamin
+2024-12-13 15:47:30,SAM-6370,Sample Handler,Sample not aspirated,Info,EC-93810-001,1.9.1,29.8,Pablo Neruda
+2024-09-26 00:49:20,REA-5002,Reagent Management,Reagent bottle missing,Critical,EC-93810-001,2.3.1,16.5,Gabriela Mistral
+2025-06-03 23:44:23,POW-5364,Power Supply,Voltage fluctuation detected,Info,EC-93810-001,3.5.10,31.4,Violeta Parra
+2025-04-13 03:33:03,BAR-5867,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,3.2.10,32.4,Aline Prata
+2024-11-08 07:19:45,BAR-1060,Barcode Reader,Unreadable barcode,Critical,EC-93810-001,2.9.16,15.7,Eduardo Galeano
+2024-12-07 03:32:57,POW-2502,Power Supply,Power supply overload,Info,EC-93810-001,5.4.7,30.9,Eduardo Galeano
+2025-02-05 04:47:48,BAR-6558,Barcode Reader,Unreadable barcode,Warning,EC-93810-001,3.6.5,22.7,Violeta Parra
+2024-08-24 05:29:25,OPT-6102,Optics,Wavelength calibration failed,Warning,EC-93810-001,1.7.0,15.8,Violeta Parra
+2025-06-20 08:43:53,POW-9804,Power Supply,Power surge detected,Warning,EC-93810-001,5.2.6,22.1,Mario Benedetti
+2025-02-06 11:06:32,OPT-4891,Optics,Optical sensor malfunction,Info,EC-93810-001,4.9.8,31.3,Violeta Parra
+2025-04-22 01:57:38,SAM-8627,Sample Handler,Sample not aspirated,Info,EC-93810-001,1.4.13,17.3,Pepe Mujica
+2025-07-01 06:50:49,RAC-6786,Rack Handler,Rack sensor failure,Warning,EC-93810-001,1.6.15,17.8,Gabriela Mistral
+2025-05-26 13:56:46,RAC-4942,Rack Handler,Rack not detected,Critical,EC-93810-001,3.3.12,29,Gabriela Mistral
+2024-09-02 02:04:09,POW-4525,Power Supply,Power surge detected,Critical,EC-93810-001,5.8.5,25.2,Monica Araya
+2025-06-21 01:14:28,POW-7595,Power Supply,Battery backup failure,Info,EC-93810-001,3.3.9,18.6,Mario Benedetti
+2024-12-31 18:42:19,OPT-4049,Optics,Light source intensity low,Info,EC-93810-001,2.9.19,34.5,Mario Benedetti
+2025-05-26 08:35:03,FLU-6051,Fluidics,Fluid leak detected,Info,EC-93810-001,2.8.10,26.5,Juan Angola
+2024-12-08 23:02:08,TEM-2616,Temperature Control,Temperature sensor error,Warning,EC-93810-001,4.4.18,16.5,Gabriela Mistral
+2025-01-11 04:54:42,POW-3214,Power Supply,Power supply overload,Warning,EC-93810-001,2.5.7,28.6,Mario Benedetti
+2025-07-30 23:22:54,POW-1629,Power Supply,Battery backup failure,Warning,EC-93810-001,1.8.14,23.8,Mario Benedetti
+2025-04-15 18:10:26,SAM-6689,Sample Handler,Sample probe clogged,Critical,EC-93810-001,4.6.10,26.7,Eduardo Galeano
+2025-07-25 15:12:33,POW-9751,Power Supply,Power supply overload,Critical,EC-93810-001,2.8.7,26.3,Gabriela Mistral
+2025-01-28 03:44:18,POW-7788,Power Supply,Power supply overload,Info,EC-93810-001,2.7.5,26.7,Monica Araya
+2025-06-19 19:15:08,FLU-9639,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,1.7.11,19.6,Oswaldo Guayasamin
+2025-07-10 07:24:31,BAR-9131,Barcode Reader,Barcode checksum mismatch,Critical,EC-93810-001,1.9.16,19.5,Oswaldo Guayasamin
+2025-01-26 12:23:37,TEM-9869,Temperature Control,Temperature sensor error,Critical,EC-93810-001,3.6.13,26.6,Pablo Neruda
+2025-06-04 13:28:10,FLU-1319,Fluidics,Fluid leak detected,Critical,EC-93810-001,2.0.17,21.1,Pablo Neruda
+2025-03-12 08:15:23,REA-3017,Reagent Management,Reagent expired,Critical,EC-93810-001,4.5.11,30.3,Mario Benedetti
+2025-04-16 05:55:13,SAM-7523,Sample Handler,Sample vial missing,Info,EC-93810-001,1.5.2,21.1,Mario Benedetti
+2025-07-10 23:38:30,OPT-1001,Optics,Laser alignment error,Info,EC-93810-001,2.2.15,31.8,Gabriela Mistral
+2024-10-12 23:07:24,REA-6614,Reagent Management,Reagent mixing error,Warning,EC-93810-001,1.7.10,23.2,Pepe Mujica
+2025-06-07 06:16:01,SAM-1385,Sample Handler,Sample not aspirated,Warning,EC-93810-001,5.5.0,21.5,Violeta Parra
+2024-11-20 18:01:57,SAM-6781,Sample Handler,Sample vial missing,Critical,EC-93810-001,5.2.17,18.1,Pepe Mujica
+2025-02-21 05:33:38,POW-4708,Power Supply,Power surge detected,Warning,EC-93810-001,3.7.2,26.2,Violeta Parra
+2024-11-09 08:42:12,SAM-3584,Sample Handler,Sample probe alignment error,Critical,EC-93810-001,3.1.2,19.5,Violeta Parra
+2024-10-22 21:16:24,FLU-6611,Fluidics,Flow rate out of range,Info,EC-93810-001,5.7.14,20.8,Juan Angola
+2024-09-03 06:49:35,REA-1924,Reagent Management,Reagent expired,Info,EC-93810-001,2.4.16,33,Pepe Mujica
+2024-09-10 13:03:30,SAM-6733,Sample Handler,Sample probe clogged,Warning,EC-93810-001,4.3.17,18.3,Monica Araya
+2025-03-28 19:39:45,POW-7646,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,5.7.16,16.7,Eduardo Galeano
+2025-08-13 13:43:22,OPT-3018,Optics,Wavelength calibration failed,Info,EC-93810-001,4.7.17,18.5,Aline Prata
+2024-12-10 23:48:37,TEM-5327,Temperature Control,Heater malfunction,Critical,EC-93810-001,4.6.8,26.7,Pablo Neruda
+2024-11-01 16:19:04,RAC-8199,Rack Handler,Rack motor jammed,Critical,EC-93810-001,4.1.2,26.6,Violeta Parra
+2025-06-17 19:37:52,REA-8725,Reagent Management,Reagent expired,Warning,EC-93810-001,3.0.1,23.1,Pepe Mujica
+2025-04-02 12:14:59,POW-2114,Power Supply,Voltage fluctuation detected,Warning,EC-93810-001,2.1.18,27.2,Oswaldo Guayasamin
+2025-01-29 11:18:36,RAC-8509,Rack Handler,Rack position error,Warning,EC-93810-001,2.1.13,30.6,Pablo Neruda
+2024-10-11 07:19:26,RAC-7463,Rack Handler,Rack motor jammed,Info,EC-93810-001,4.8.18,34.7,Pablo Neruda
+2025-07-31 12:02:17,OPT-8392,Optics,Light source intensity low,Warning,EC-93810-001,1.8.19,26.3,Oswaldo Guayasamin
+2024-08-22 01:50:22,RAC-5826,Rack Handler,Rack sensor failure,Info,EC-93810-001,3.4.5,18.2,Oswaldo Guayasamin
+2024-10-10 12:03:46,TEM-9914,Temperature Control,Cooling system failure,Critical,EC-93810-001,4.0.19,27.1,Juan Angola
+2025-06-30 21:57:24,POW-8887,Power Supply,Power supply overload,Critical,EC-93810-001,4.8.3,16.2,Mario Benedetti
+2025-07-07 00:54:50,REA-5376,Reagent Management,Reagent mixing error,Critical,EC-93810-001,3.5.18,28.7,Pablo Neruda
+2024-10-11 09:02:25,BAR-9083,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,4.5.1,32.5,Gabriela Mistral
+2025-06-05 15:06:09,REA-2045,Reagent Management,Reagent level low,Critical,EC-93810-001,1.4.17,32.9,Aline Prata
+2025-05-12 13:13:12,POW-6107,Power Supply,Battery backup failure,Info,EC-93810-001,5.3.11,21.9,Monica Araya
+2024-11-16 05:33:45,SAM-8466,Sample Handler,Sample probe clogged,Info,EC-93810-001,1.7.5,31.2,Mario Benedetti
+2024-10-15 11:42:01,TEM-9300,Temperature Control,Cooling system failure,Critical,EC-93810-001,5.1.14,22.9,Pepe Mujica
+2025-07-07 13:47:57,REA-3736,Reagent Management,Reagent level low,Warning,EC-93810-001,3.8.12,16.9,Pepe Mujica
+2025-05-04 12:25:32,SAM-5122,Sample Handler,Sample vial missing,Critical,EC-93810-001,3.5.8,21.2,Aline Prata
+2025-03-02 23:17:08,OPT-5590,Optics,Light source intensity low,Warning,EC-93810-001,2.9.2,27.3,Gabriela Mistral
+2025-07-10 08:11:56,SAM-3663,Sample Handler,Sample not aspirated,Critical,EC-93810-001,2.0.7,30.1,Aline Prata
+2024-09-03 02:56:23,RAC-1090,Rack Handler,Rack position error,Info,EC-93810-001,3.4.5,27.1,Oswaldo Guayasamin
+2025-07-07 23:21:35,POW-4584,Power Supply,Power supply overload,Critical,EC-93810-001,5.5.13,28.9,Mario Benedetti
+2024-09-10 18:24:53,FLU-9539,Fluidics,Fluid leak detected,Warning,EC-93810-001,2.5.7,21.4,Monica Araya
+2025-05-05 19:19:31,OPT-2454,Optics,Laser alignment error,Info,EC-93810-001,4.1.19,17.3,Pablo Neruda
+2025-04-17 10:18:12,FLU-8046,Fluidics,Reservoir empty,Critical,EC-93810-001,2.9.3,33.4,Juan Angola
+2024-08-23 08:31:37,TEM-9116,Temperature Control,Temperature out of range,Warning,EC-93810-001,5.9.8,24.4,Pepe Mujica
+2024-11-22 13:17:25,OPT-2453,Optics,Laser alignment error,Info,EC-93810-001,5.7.5,24.1,Juan Angola
+2025-01-02 16:53:15,OPT-8763,Optics,Wavelength calibration failed,Warning,EC-93810-001,5.6.17,23.7,Monica Araya
+2025-06-28 22:45:31,RAC-7356,Rack Handler,Rack position error,Warning,EC-93810-001,2.0.10,23.9,Juan Angola
+2025-03-31 07:00:31,SAM-4153,Sample Handler,Sample not aspirated,Info,EC-93810-001,5.8.19,22.4,Violeta Parra
+2024-10-07 15:38:35,POW-6693,Power Supply,Power surge detected,Warning,EC-93810-001,1.7.9,21,Pepe Mujica
+2025-05-18 13:50:36,BAR-9543,Barcode Reader,Barcode scanner timeout,Critical,EC-93810-001,2.4.17,23.7,Aline Prata
+2024-12-16 04:24:39,RAC-4383,Rack Handler,Rack sensor failure,Critical,EC-93810-001,5.9.11,18.9,Monica Araya
+2025-01-16 13:47:19,FLU-7771,Fluidics,Flow rate out of range,Info,EC-93810-001,2.7.17,33.5,Aline Prata
+2025-05-03 01:11:23,POW-6663,Power Supply,Power supply overload,Critical,EC-93810-001,3.8.13,18.3,Aline Prata
+2024-12-02 06:47:36,OPT-8270,Optics,Optical sensor malfunction,Critical,EC-93810-001,2.5.17,28.1,Pepe Mujica
+2025-01-01 04:05:23,FLU-9565,Fluidics,Flow rate out of range,Critical,EC-93810-001,2.8.6,17.2,Oswaldo Guayasamin
+2025-03-27 01:13:42,OPT-2088,Optics,Wavelength calibration failed,Info,EC-93810-001,1.3.4,24.9,Pepe Mujica
+2025-03-02 04:15:41,RAC-8749,Rack Handler,Rack sensor failure,Critical,EC-93810-001,4.1.11,28,Monica Araya
+2025-03-17 02:01:37,RAC-9383,Rack Handler,Rack motor jammed,Critical,EC-93810-001,4.8.10,24.5,Monica Araya
+2025-06-20 03:49:56,SAM-9003,Sample Handler,Sample probe alignment error,Warning,EC-93810-001,4.5.6,22,Pablo Neruda
+2025-03-31 11:37:08,TEM-7420,Temperature Control,Temperature sensor error,Warning,EC-93810-001,2.5.11,24.6,Mario Benedetti
+2025-08-08 10:22:34,FLU-3586,Fluidics,Flow rate out of range,Warning,EC-93810-001,2.5.5,21.2,Pepe Mujica
+2025-06-14 04:17:43,OPT-6847,Optics,Laser alignment error,Critical,EC-93810-001,1.8.13,21,Pablo Neruda
+2024-11-01 11:23:41,SAM-4577,Sample Handler,Sample not aspirated,Warning,EC-93810-001,3.3.12,19.5,Monica Araya
+2024-10-14 01:43:35,REA-9212,Reagent Management,Reagent expired,Critical,EC-93810-001,2.4.11,16.1,Oswaldo Guayasamin
+2025-03-11 15:54:02,OPT-9291,Optics,Light source intensity low,Critical,EC-93810-001,3.7.16,18.3,Mario Benedetti
+2025-07-21 00:45:21,SAM-9469,Sample Handler,Sample probe clogged,Warning,EC-93810-001,3.9.8,22.5,Pablo Neruda
+2024-12-25 10:05:02,RAC-6985,Rack Handler,Rack position error,Critical,EC-93810-001,2.7.14,17.7,Juan Angola
+2024-10-13 06:55:09,OPT-4510,Optics,Optical sensor malfunction,Critical,EC-93810-001,4.5.7,21.9,Violeta Parra
+2024-08-17 11:29:44,POW-5069,Power Supply,Power surge detected,Warning,EC-93810-001,5.6.7,27.2,Gabriela Mistral
+2025-04-22 07:37:22,SAM-8205,Sample Handler,Sample not aspirated,Critical,EC-93810-001,3.0.9,30,Aline Prata
+2025-04-02 11:53:11,REA-9452,Reagent Management,Reagent mixing error,Critical,EC-93810-001,4.0.18,28.3,Aline Prata
+2025-03-11 05:56:13,OPT-1634,Optics,Laser alignment error,Critical,EC-93810-001,3.3.1,18.1,Gabriela Mistral
+2024-08-23 16:00:37,REA-4827,Reagent Management,Reagent level low,Info,EC-93810-001,3.2.0,16.5,Juan Angola
+2025-04-07 07:12:52,REA-1757,Reagent Management,Reagent level low,Info,EC-93810-001,3.6.12,18.6,Mario Benedetti
+2025-06-18 06:41:09,OPT-2663,Optics,Laser alignment error,Info,EC-93810-001,1.2.1,18.7,Mario Benedetti
+2024-10-29 14:24:58,REA-7228,Reagent Management,Reagent mixing error,Warning,EC-93810-001,5.1.5,34.7,Oswaldo Guayasamin
+2025-03-03 04:35:09,BAR-4469,Barcode Reader,Barcode misalignment,Critical,EC-93810-001,3.5.8,25.6,Pepe Mujica
+2025-06-25 12:48:17,POW-8998,Power Supply,Power surge detected,Info,EC-93810-001,3.0.4,29.1,Oswaldo Guayasamin
+2025-02-02 08:15:21,TEM-1965,Temperature Control,Temperature out of range,Critical,EC-93810-001,1.8.19,31.5,Juan Angola
+2024-12-04 08:30:55,REA-7160,Reagent Management,Reagent bottle missing,Info,EC-93810-001,5.6.4,27.2,Pablo Neruda
+2025-04-07 02:54:26,RAC-5156,Rack Handler,Rack sensor failure,Warning,EC-93810-001,3.4.9,24.3,Monica Araya
+2025-01-30 23:37:49,BAR-1608,Barcode Reader,Barcode checksum mismatch,Info,EC-93810-001,1.0.10,26.5,Eduardo Galeano
+2025-04-02 05:14:23,RAC-1288,Rack Handler,Rack not detected,Critical,EC-93810-001,2.8.5,15.7,Pablo Neruda
+2025-03-02 10:29:32,RAC-3280,Rack Handler,Rack not detected,Info,EC-93810-001,3.9.4,15.7,Pepe Mujica
+2025-06-20 08:43:41,POW-5251,Power Supply,Power supply overload,Critical,EC-93810-001,2.9.7,19.3,Oswaldo Guayasamin
+2025-02-08 17:43:18,BAR-4704,Barcode Reader,Unreadable barcode,Info,EC-93810-001,1.0.6,22,Violeta Parra
+2025-03-11 01:13:58,OPT-8421,Optics,Laser alignment error,Info,EC-93810-001,3.1.0,22.7,Mario Benedetti
+2024-10-23 03:07:19,BAR-2504,Barcode Reader,Unreadable barcode,Warning,EC-93810-001,3.3.6,25.5,Pepe Mujica
+2025-03-29 11:59:34,FLU-5324,Fluidics,Pump pressure adjustment needed,Info,EC-93810-001,4.7.16,28.3,Oswaldo Guayasamin
+2025-05-25 21:39:02,OPT-5127,Optics,Light source intensity low,Warning,EC-93810-001,2.1.5,30.7,Aline Prata
+2024-10-18 00:19:21,POW-1558,Power Supply,Voltage fluctuation detected,Warning,EC-93810-001,1.6.17,33.7,Juan Angola
+2024-09-23 19:02:17,BAR-7871,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,3.6.5,33.4,Pablo Neruda
+2025-04-26 20:03:41,FLU-9998,Fluidics,Pump pressure adjustment needed,Warning,EC-93810-001,3.5.18,21,Pablo Neruda
+2025-02-06 00:21:45,OPT-7781,Optics,Wavelength calibration failed,Info,EC-93810-001,3.4.15,28.7,Pablo Neruda
+2024-12-20 06:25:50,FLU-7261,Fluidics,Fluid leak detected,Info,EC-93810-001,2.7.5,19.5,Violeta Parra
+2024-10-17 07:02:48,OPT-3999,Optics,Wavelength calibration failed,Critical,EC-93810-001,1.8.5,34.3,Pepe Mujica
+2025-05-23 14:53:45,RAC-1931,Rack Handler,Rack motor jammed,Info,EC-93810-001,1.2.14,31.2,Pablo Neruda
+2024-12-08 08:29:44,RAC-9300,Rack Handler,Rack motor jammed,Critical,EC-93810-001,1.7.4,23.6,Mario Benedetti
+2024-12-29 10:18:09,BAR-1458,Barcode Reader,Barcode checksum mismatch,Critical,EC-93810-001,4.2.15,29.7,Pepe Mujica
+2024-09-28 13:07:14,REA-6772,Reagent Management,Reagent bottle missing,Warning,EC-93810-001,1.3.6,27.9,Gabriela Mistral
+2024-12-05 15:58:42,RAC-2755,Rack Handler,Rack sensor failure,Info,EC-93810-001,4.2.10,22.5,Aline Prata
+2024-08-17 17:40:52,TEM-3001,Temperature Control,Temperature out of range,Warning,EC-93810-001,2.6.15,16.6,Eduardo Galeano
+2025-03-17 11:26:04,BAR-1846,Barcode Reader,Unreadable barcode,Critical,EC-93810-001,3.9.8,22.3,Mario Benedetti
+2025-06-30 09:48:16,TEM-7139,Temperature Control,Heater malfunction,Info,EC-93810-001,1.8.0,23.1,Pablo Neruda
+2025-08-07 20:49:47,FLU-7833,Fluidics,Reservoir empty,Info,EC-93810-001,3.9.13,21.7,Pepe Mujica
+2025-03-11 07:04:33,RAC-1840,Rack Handler,Rack motor jammed,Critical,EC-93810-001,1.5.13,25.7,Oswaldo Guayasamin
+2025-04-24 07:41:54,POW-9947,Power Supply,Power surge detected,Critical,EC-93810-001,2.9.14,34.2,Monica Araya
+2024-09-03 03:48:07,TEM-2360,Temperature Control,Temperature sensor error,Critical,EC-93810-001,2.8.11,17,Aline Prata
+2024-08-31 05:47:46,RAC-4089,Rack Handler,Rack not detected,Warning,EC-93810-001,3.7.6,31,Monica Araya
+2024-10-12 02:58:23,REA-3435,Reagent Management,Reagent mixing error,Info,EC-93810-001,4.5.2,25.1,Monica Araya
+2024-08-16 19:25:15,BAR-7336,Barcode Reader,Barcode misalignment,Warning,EC-93810-001,5.5.2,20.2,Gabriela Mistral
+2025-04-11 16:15:33,POW-7502,Power Supply,Power supply overload,Warning,EC-93810-001,4.7.4,18.3,Pepe Mujica
+2024-11-17 22:02:00,SAM-6097,Sample Handler,Sample not aspirated,Warning,EC-93810-001,4.8.12,32.3,Pablo Neruda
+2024-10-10 10:43:03,POW-9924,Power Supply,Power supply overload,Critical,EC-93810-001,5.6.7,30.8,Gabriela Mistral
+2025-05-22 01:38:58,RAC-1409,Rack Handler,Rack sensor failure,Warning,EC-93810-001,3.7.10,21.7,Pepe Mujica
+2024-09-30 05:56:20,REA-6715,Reagent Management,Reagent expired,Warning,EC-93810-001,5.0.7,21.6,Juan Angola
+2024-11-21 04:48:50,REA-7077,Reagent Management,Reagent mixing error,Critical,EC-93810-001,2.8.19,29.1,Oswaldo Guayasamin
+2024-10-24 18:21:48,POW-8419,Power Supply,Voltage fluctuation detected,Critical,EC-93810-001,1.9.18,19.7,Aline Prata
+2025-04-18 13:21:22,SAM-4335,Sample Handler,Sample vial missing,Critical,EC-93810-001,1.6.19,28.8,Aline Prata
+2024-10-24 19:40:30,TEM-4717,Temperature Control,Cooling system failure,Warning,EC-93810-001,3.9.15,19.7,Aline Prata
+2025-02-20 17:24:35,RAC-7672,Rack Handler,Rack sensor failure,Info,EC-93810-001,3.7.18,28.2,Pablo Neruda
+2025-03-05 14:44:45,RAC-9560,Rack Handler,Rack position error,Info,EC-93810-001,4.3.12,28.6,Aline Prata
+2025-04-24 13:51:58,TEM-5474,Temperature Control,Temperature sensor error,Critical,EC-93810-001,1.1.8,27.4,Gabriela Mistral
+2024-12-24 10:21:12,BAR-3313,Barcode Reader,Barcode checksum mismatch,Critical,EC-93810-001,5.1.10,30.7,Mario Benedetti
+2025-03-24 17:14:40,OPT-7969,Optics,Laser alignment error,Warning,EC-93810-001,5.2.6,31.5,Juan Angola
+2025-05-29 04:19:43,FLU-3542,Fluidics,Flow rate out of range,Info,EC-93810-001,1.3.10,22,Aline Prata
+2024-12-15 07:24:10,POW-4678,Power Supply,Voltage fluctuation detected,Warning,EC-93810-001,5.7.12,32,Eduardo Galeano
+2025-04-20 08:13:36,BAR-9036,Barcode Reader,Barcode scanner timeout,Warning,EC-93810-001,2.1.15,32.9,Aline Prata
+2025-05-21 01:22:16,RAC-2570,Rack Handler,Rack sensor failure,Info,EC-93810-001,2.7.16,31.9,Oswaldo Guayasamin
+2025-07-04 07:31:02,TEM-4710,Temperature Control,Temperature sensor error,Warning,EC-93810-001,4.9.3,15.2,Aline Prata
+2025-07-12 22:57:30,FLU-1180,Fluidics,Flow rate out of range,Warning,EC-93810-001,5.3.10,31.3,Oswaldo Guayasamin
+2025-04-20 19:34:25,TEM-4211,Temperature Control,Cooling system failure,Critical,EC-93810-001,4.8.2,23.6,Pepe Mujica
+2024-11-09 02:11:27,TEM-9689,Temperature Control,Heater malfunction,Warning,EC-93810-001,3.8.18,15.6,Oswaldo Guayasamin
+2025-03-21 14:23:36,SAM-9590,Sample Handler,Sample probe clogged,Warning,EC-93810-001,4.2.14,29.9,Pepe Mujica
+2024-11-06 22:22:16,FLU-6728,Fluidics,Pump pressure adjustment needed,Critical,EC-93810-001,1.4.3,18.6,Pepe Mujica
+2024-08-23 00:28:49,TEM-7623,Temperature Control,Temperature sensor error,Critical,EC-93810-001,4.5.0,20.1,Pablo Neruda
+2025-03-18 02:12:45,SAM-3056,Sample Handler,Sample vial missing,Critical,EC-93810-001,1.2.6,25.6,Aline Prata
+2024-10-04 20:26:33,OPT-3400,Optics,Wavelength calibration failed,Info,EC-93810-001,4.7.18,33.6,Pablo Neruda
+2024-09-14 16:08:23,BAR-6270,Barcode Reader,Unreadable barcode,Info,EC-93810-001,5.9.20,30.2,Gabriela Mistral
+2024-10-22 09:11:05,SAM-7685,Sample Handler,Sample probe clogged,Warning,EC-93810-001,3.1.5,29,Mario Benedetti
+2025-07-06 12:40:39,OPT-1603,Optics,Laser alignment error,Critical,EC-93810-001,5.7.9,15.9,Pepe Mujica
+2025-06-12 07:49:19,RAC-7368,Rack Handler,Rack sensor failure,Info,EC-93810-001,5.9.19,28.1,Aline Prata
+2025-02-18 06:45:14,SAM-8603,Sample Handler,Sample not aspirated,Warning,EC-93810-001,4.5.9,27.6,Pepe Mujica
+2025-03-30 11:49:54,RAC-5156,Rack Handler,Rack not detected,Warning,EC-93810-001,3.1.16,21.3,Pablo Neruda
+2024-09-04 11:35:07,POW-2088,Power Supply,Battery backup failure,Warning,EC-93810-001,1.7.3,26.9,Oswaldo Guayasamin
+2025-01-22 14:58:53,RAC-5094,Rack Handler,Rack position error,Critical,EC-93810-001,4.0.2,24,Aline Prata
+2024-12-01 08:57:26,BAR-9643,Barcode Reader,Barcode checksum mismatch,Critical,EC-93810-001,4.8.13,22,Violeta Parra
+2024-09-23 16:01:31,TEM-4335,Temperature Control,Temperature out of range,Warning,EC-93810-001,2.3.18,34.4,Eduardo Galeano
+2025-02-25 10:03:33,POW-7897,Power Supply,Power supply overload,Warning,EC-93810-001,4.4.12,23.3,Oswaldo Guayasamin
+2024-12-29 21:09:10,POW-1198,Power Supply,Battery backup failure,Warning,EC-93810-001,4.3.7,23.6,Mario Benedetti
+2024-10-18 18:01:31,POW-4190,Power Supply,Battery backup failure,Warning,EC-93810-001,5.0.3,25,Gabriela Mistral
+2024-08-31 06:42:08,RAC-2902,Rack Handler,Rack not detected,Warning,EC-93810-001,2.5.13,16.2,Juan Angola
+2025-06-29 07:51:45,SAM-4852,Sample Handler,Sample vial missing,Warning,EC-93810-001,5.9.7,33.4,Aline Prata
