@@ -17,6 +17,15 @@
             "name": "error_log_ec001",
             "database": "error_log_ec001",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "fse_reports",
+            "database": "fse_reports_dataset",
+            "username": "postgres"
         }
     ]
 }

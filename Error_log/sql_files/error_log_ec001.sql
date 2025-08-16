@@ -25,5 +25,17 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 \copy error_log_ec001 FROM 'C:\csv_projects\dataset_error_log_001\error_log_ec001.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 --
 
-SELECT * FROM error_log_ec001 LIMIT 5;
+SELECT * 
+FROM error_log_ec001
+WHERE 
+    description LIKE '%alignment error%' AND
+    error_type = 'Sample Handler' AND
+    severity <> 'Info'
+    timestamp > '2025-01-01 00:00:00'
+ORDER BY timestamp DESC
+LIMIT 100;
+
+
+
+CREATE DATABASE fse_reports_dataset;
 
