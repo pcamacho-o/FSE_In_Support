@@ -6,8 +6,8 @@
 
 ## <a name="en"></a>🇬🇧 English
 ## 📌 Project Overview
-This analytical project consolidates Field Service Engineer (FSE) synthetic intervention reports in Chile to identify patterns, improve efficiency, and support data-driven decisions.  
-By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds, cleaning and transforming via **Power Query**, modeled with **Power Pivot / DAX**, and visualized in **Excel Dashboards**.
+This analytical project consolidates synthetic Field Service Engineer (FSE) intervention reports in Chile to identify patterns, improve efficiency, and support data-driven decisions.  
+Extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds, cleaning and transforming via **Power Query**, modeled with **Power Pivot / DAX**, and visualized in **Excel Dashboards**.
 
 ---
 
@@ -20,11 +20,12 @@ By extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds
 
 ### Transformations
 1. **Split `analyzer_id` & `analyzer_model`**  
-   Extracted from **Column D** to create separate fields for better filtering and analysis.  
+   Extracted from **Column D** to create separate fields for better filtering and analysis.
+     
    <img width="1055" height="595" alt="Split Model" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
 
 
-2. **Split `start_time` & `end_time`**  
+3. **Split `start_time` & `end_time`**  
 Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 
    <img width="450" height="500" alt="Intervention Start" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" /> <img width="450" height="500" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />
@@ -36,7 +37,8 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 5. **Include Relevant Columns:** E, G, H, I, J, K, L, M, N, Q.
 
 6. **Rename Headers to Code-Friendly Format**  
-   Improves DAX usability and avoids syntax issues.  
+   Improves DAX usability and avoids syntax issues.
+    
    <img width="555" height="555" alt="Rename Columns" src="https://github.com/user-attachments/assets/bf9db4df-e463-40cf-9d80-260774f84af9" />
 
 ---
@@ -51,7 +53,9 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
       DISTINCTCOUNT(FSE_s_Reports[report_id])
   )
 ## 📈 Dashboard Insights
+
 ![Dashboard](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
+
 ### 🎯 Slicers
 - **Analyzer**
 - **Spare Part**
@@ -77,7 +81,9 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 ---
 
 ## ❓ Analysis Questions & Answers
-<img width="1897" height="753" alt="Dashboard" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
+<img width="1897" height="753" alt="Dashboard_img" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
 ### 1. Spare Part Causing Most Downtime Relative to Replacement Frequency
 **Pivot Table:**  
 - Rows = `Spare Part`  
@@ -87,45 +93,6 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 - Highest replacement frequency: **Heating Element** — 7 replacements, avg downtime **2.9 hrs**  
 - Highest downtime: **Light Source** — 1 replacement, downtime **4.6 hrs**  
 - **Note:** If issue not resolved → machine remains offline until next visit
-
-
----
-
-### 2. Avg Resolution Time for Specific Spare Part Replacement
-**Pivot Table:**  
-- Rows = `Spare Part`  
-- Values = `Average Resolution Time`  
-
-**Key Insight:** _[to be added]_
-
----
-
-### 3. FSE’s Recommended for First Installations
-**Pivot Table:**  
-- Rows = `FSE Name`  
-- Values = `Intervention Count`, `Avg Resolution Time`  
-
-**Key Insight:** _[to be added]_
-
----
-
-### 4. Analyzers with Longest Cumulative Downtime
-**Pivot Table:**  
-- Rows = `Analyzer`  
-- Values = `Total Resolution Time (hrs)`  
-
-**Key Insight:** _[to be added]_
-
----
-
-### 5. Top Analyzers Presenting Specific Spare Part Replacement
-**Pivot Table:**  
-- Rows = `Analyzer`  
-- Columns = `Spare Part`  
-- Values = `Count of Interventions`  
-
-**Key Insight:** _[to be added after slicer application]_
-
 
 ---
 
@@ -163,17 +130,23 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 ### Transformaciones
 1. **Dividir `analyzer_id` y `analyzer_model`**  
    Extraído de la **Columna D** para crear campos separados que permitan un mejor filtrado y análisis.
+   
+   <img width="1055" height="595" alt="Split Model_es" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
 
-2. **Dividir `start_time` y `end_time`**  
-   Extraído de la **Columna F** (formato: `AAAA-MM-DD HH:MM - HH:MM`).  
+3. **Dividir `start_time` y `end_time`**  
+   Extraído de la **Columna F** (formato: `AAAA-MM-DD HH:MM - HH:MM`).
 
-3. **Extraer `fse_name`**  
+      <img width="450" height="500" alt="Intervention Start_es" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" /> <img width="450" height="500" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />  
+
+5. **Extraer `fse_name`**  
    Tomado de la **Columna O**.  
 
-4. **Incluir columnas relevantes:** E, G, H, I, J, K, L, M, N, Q.
+6. **Incluir columnas relevantes:** E, G, H, I, J, K, L, M, N, Q.
 
-5. **Renombrar encabezados a formato compatible con código**  
+7. **Renombrar encabezados a formato compatible con código**  
    Mejora la usabilidad en DAX y evita problemas de sintaxis.
+   
+   <img width="555" height="555" alt="Rename Columns_es" src="https://github.com/user-attachments/assets/bf9db4df-e463-40cf-9d80-260774f84af9" />
 
 ---
 
@@ -189,6 +162,9 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
   ```
 
 ## 📈 Información del Tablero
+
+![Dashboard_es](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
+
 ### 🎯 Segmentadores
 - **Analizador**
 - **Repuesto**
@@ -215,6 +191,8 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 
 ## ❓ Preguntas y Respuestas del Análisis
 
+<img width="1897" height="753" alt="Dashboard_imges" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
 ### 1. Repuesto que causa mayor inactividad en relación a la frecuencia de reemplazo
 **Tabla dinámica:**  
 - Filas = `Repuesto`  
@@ -227,42 +205,6 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 
 ---
 
-### 2. Tiempo promedio de resolución por reemplazo de un repuesto específico
-**Tabla dinámica:**  
-- Filas = `Repuesto`  
-- Valores = `Tiempo promedio de resolución`  
-
-**Hallazgo clave:** _[por agregar]_
-
----
-
-### 3. FSE recomendados para primeras instalaciones
-**Tabla dinámica:**  
-- Filas = `Nombre FSE`  
-- Valores = `Conteo de intervenciones`, `Tiempo promedio de resolución`  
-
-**Hallazgo clave:** _[por agregar]_
-
----
-
-### 4. Analizadores con mayor tiempo de inactividad acumulado
-**Tabla dinámica:**  
-- Filas = `Analizador`  
-- Valores = `Tiempo total de resolución (hrs)`  
-
-**Hallazgo clave:** _[por agregar]_
-
----
-
-### 5. Principales analizadores que presentan reemplazo de un repuesto específico
-**Tabla dinámica:**  
-- Filas = `Analizador`  
-- Columnas = `Repuesto`  
-- Valores = `Conteo de intervenciones`  
-
-**Hallazgo clave:** _[por agregar después de aplicar segmentador]_
-
----
 
 ## 📌 Conclusiones
 - Desarrollar material de capacitación específico para repuestos con alta inactividad  
@@ -298,17 +240,23 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 ### Transformations
 1. **Séparer `analyzer_id` et `analyzer_model`**  
    Extrait de la **Colonne D** pour créer des champs séparés permettant un meilleur filtrage et une meilleure analyse.
+   
+   <img width="1055" height="595" alt="Split Model_fr" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
 
-2. **Séparer `start_time` et `end_time`**  
-   Extrait de la **Colonne F** (format : `AAAA-MM-JJ HH:MM - HH:MM`).  
+3. **Séparer `start_time` et `end_time`**  
+   Extrait de la **Colonne F** (format : `AAAA-MM-JJ HH:MM - HH:MM`).
+   
+      <img width="450" height="500" alt="Intervention Start_fr" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" /> <img width="450" height="500" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />  
 
-3. **Extraire `fse_name`**  
+5. **Extraire `fse_name`**  
    Pris de la **Colonne O**.  
 
-4. **Inclure les colonnes pertinentes :** E, G, H, I, J, K, L, M, N, Q.
+6. **Inclure les colonnes pertinentes :** E, G, H, I, J, K, L, M, N, Q.
 
-5. **Renommer les en-têtes en format compatible avec le code**  
+7. **Renommer les en-têtes en format compatible avec le code**  
    Améliore l’utilisation dans DAX et évite les problèmes de syntaxe.
+
+    <img width="555" height="555" alt="Rename Columns_fr" src="https://github.com/user-attachments/assets/bf9db4df-e463-40cf-9d80-260774f84af9" />
 
 ---
 
@@ -324,6 +272,9 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
   ```
 
 ## 📈 Aperçu du Tableau de Bord
+
+![Dashboard_fr](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
+
 ### 🎯 Segments
 - **Analyseur**
 - **Pièce de rechange**
@@ -350,6 +301,8 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 
 ## ❓ Questions et Réponses de l’Analyse
 
+<img width="1897" height="753" alt="Dashboard_imgfr" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
 ### 1. Pièce de rechange causant le plus de temps d'arrêt par rapport à la fréquence de remplacement
 **Tableau croisé dynamique :**  
 - Lignes = `Pièce de rechange`  
@@ -359,43 +312,6 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 - Fréquence de remplacement la plus élevée : **Élément chauffant** — 7 remplacements, temps d'arrêt moyen **2,9 hrs**  
 - Temps d'arrêt le plus élevé : **Source lumineuse** — 1 remplacement, temps d'arrêt **4,6 hrs**  
 - **Remarque :** Si le problème n'est pas résolu → la machine reste hors service jusqu'à la prochaine visite
-
----
-
-### 2. Temps moyen de résolution pour le remplacement d'une pièce spécifique
-**Tableau croisé dynamique :**  
-- Lignes = `Pièce de rechange`  
-- Valeurs = `Temps moyen de résolution`  
-
-**Conclusion clé :** _[à ajouter]_
-
----
-
-### 3. FSE recommandés pour les premières installations
-**Tableau croisé dynamique :**  
-- Lignes = `Nom FSE`  
-- Valeurs = `Nombre d'interventions`, `Temps moyen de résolution`  
-
-**Conclusion clé :** _[à ajouter]_
-
----
-
-### 4. Analyseurs avec le plus long temps d'arrêt cumulé
-**Tableau croisé dynamique :**  
-- Lignes = `Analyseur`  
-- Valeurs = `Temps total de résolution (hrs)`  
-
-**Conclusion clé :** _[à ajouter]_
-
----
-
-### 5. Principaux analyseurs présentant le remplacement d'une pièce spécifique
-**Tableau croisé dynamique :**  
-- Lignes = `Analyseur`  
-- Colonnes = `Pièce de rechange`  
-- Valeurs = `Nombre d'interventions`  
-
-**Conclusion clé :** _[à ajouter après application du segment]_
 
 ---
 
