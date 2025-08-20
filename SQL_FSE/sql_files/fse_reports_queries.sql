@@ -76,7 +76,7 @@ SELECT
     analyzer_id,
     COUNT(*) AS num_failures,
     ROUND(AVG(EXTRACT(EPOCH FROM (
-        intervention_start - prev_date)) / 3600),2) 
+        intervention_start - prev_date)) / 3600)) 
         AS MTBF
 FROM ordered_visits
 GROUP BY analyzer_id

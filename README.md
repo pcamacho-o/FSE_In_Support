@@ -15,7 +15,14 @@ This repository brings together two analytical projects based on *synthetic* Fie
 Both projects aim to **identify intervention patterns, and support data-driven decisions**.  
 
 ### ⚠️ Important Note  
-All analyses are performed on **synthetic data** generated for demonstration and educational purposes.  
+All analyses are performed on **synthetic data** generated for demonstration and educational purposes. 
+Example: Investigating following **CTE result set**, filtered for *on-site* visits, we can corroborate the **same intervention_start time** for each visit, *which is not a common behaivure of a FSE*, causing a logical result when the CTE is referenced on the MTBF SQL query.
+
+
+--- sql
+
+---
+
 
 I would be very **grateful and open** if any organization would like to collaborate by providing **real-world datasets** in order to conduct deeper, more meaningful analyses.  
 
