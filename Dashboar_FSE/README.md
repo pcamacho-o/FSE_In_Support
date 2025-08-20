@@ -31,10 +31,7 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
    <img width="450" height="500" alt="Intervention Start" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" /> <img width="450" height="500" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />
 
 4. **Extract `fse_name`**  
-   Taken from **Column O**.  
-   
-
-5. **Include Relevant Columns:** E, G, H, I, J, K, L, M, N, Q.
+   Taken from **Column O**.
 
 6. **Rename Headers to Code-Friendly Format**  
    Improves DAX usability and avoids syntax issues.
@@ -80,7 +77,7 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 
 ---
 
-## ❓ Analysis Questions & Answers
+## ❓ Analysis Q&A
 
 <img width="1897" height="753" alt="Dashboard_img" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
 
@@ -91,17 +88,15 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 
 **Key Insight:**  
 - Highest replacement frequency: **Heating Element** — 7 replacements, avg downtime **2.9 hrs**  
-- Highest downtime: **Light Source** — 1 replacement, downtime **4.6 hrs**  
-- **Note:** If issue not resolved → machine remains offline until next visit
+- Highest downtime: **Light Source** — 1 replacement, downtime **4.6 hrs**
 
 ---
 
 ## 📌 Conclusions
 - Develop targeted training materials for high-downtime spare parts  
-- Assign experienced FSE’s for new client installations
+- Experienced FSE’s for new client installations
 - Chapperone new engeneers for first installations  
 - Strengthen communication channels between frequently involved FSE’s  
-- Use downtime insights to optimize spare part stock and field interventions
 - Organize visits to get on-site information of top analyzers  
 
 ---
@@ -133,17 +128,15 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
    
    <img width="1055" height="595" alt="Split Model_es" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
 
-3. **Dividir `start_time` y `end_time`**  
+2. **Dividir `start_time` y `end_time`**  
    Extraído de la **Columna F** (formato: `AAAA-MM-DD HH:MM - HH:MM`).
 
       <img width="450" height="500" alt="Intervention Start_es" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" /> <img width="450" height="500" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />  
 
-5. **Extraer `fse_name`**  
+3. **Extraer `fse_name`**  
    Tomado de la **Columna O**.  
 
-6. **Incluir columnas relevantes:** E, G, H, I, J, K, L, M, N, Q.
-
-7. **Renombrar encabezados a formato compatible con código**  
+4. **Renombrar encabezados a formato compatible con código**  
    Mejora la usabilidad en DAX y evita problemas de sintaxis.
    
    <img width="555" height="555" alt="Rename Columns_es" src="https://github.com/user-attachments/assets/bf9db4df-e463-40cf-9d80-260774f84af9" />
@@ -208,10 +201,9 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 
 ## 📌 Conclusiones
 - Desarrollar material de capacitación específico para repuestos con alta inactividad  
-- Asignar FSE con experiencia a nuevas instalaciones de clientes  
+- FSE con experiencia a nuevas instalaciones de clientes  
 - Acompañar a nuevos ingenieros en sus primeras instalaciones  
-- Fortalecer canales de comunicación entre FSE que intervienen con frecuencia  
-- Utilizar los datos de inactividad para optimizar el stock de repuestos y las intervenciones en terreno  
+- Fortalecer canales de comunicación entre FSE que intervienen con frecuencia
 - Organizar visitas para obtener información en sitio de los analizadores principales  
 
 ---
@@ -243,17 +235,15 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
    
    <img width="1055" height="595" alt="Split Model_fr" src="https://github.com/user-attachments/assets/a3915667-2a08-4542-bde7-42c98abf4d1f" />
 
-3. **Séparer `start_time` et `end_time`**  
+2. **Séparer `start_time` et `end_time`**  
    Extrait de la **Colonne F** (format : `AAAA-MM-JJ HH:MM - HH:MM`).
    
       <img width="450" height="500" alt="Intervention Start_fr" src="https://github.com/user-attachments/assets/01fe010b-1606-4e40-8adb-bb452b1f4094" /> <img width="450" height="500" alt="Intervention End" src="https://github.com/user-attachments/assets/2654cf5d-5517-4247-af2d-4869329187a4" />  
 
-5. **Extraire `fse_name`**  
+3. **Extraire `fse_name`**  
    Pris de la **Colonne O**.  
 
-6. **Inclure les colonnes pertinentes :** E, G, H, I, J, K, L, M, N, Q.
-
-7. **Renommer les en-têtes en format compatible avec le code**  
+4. **Renommer les en-têtes en format compatible avec le code**  
    Améliore l’utilisation dans DAX et évite les problèmes de syntaxe.
 
     <img width="555" height="555" alt="Rename Columns_fr" src="https://github.com/user-attachments/assets/bf9db4df-e463-40cf-9d80-260774f84af9" />
@@ -299,7 +289,7 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 
 ---
 
-## ❓ Questions et Réponses de l’Analyse
+## ❓ Q&R de l’Analyse
 
 <img width="1897" height="753" alt="Dashboard_imgfr" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
 
@@ -317,10 +307,9 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 
 ## 📌 Conclusions
 - Développer du matériel de formation ciblé pour les pièces ayant un fort temps d'arrêt  
-- Affecter des FSE expérimentés aux nouvelles installations clients  
+- FSE expérimentés aux nouvelles installations clients  
 - Accompagner les nouveaux ingénieurs lors de leurs premières installations  
-- Renforcer les canaux de communication entre les FSE intervenant fréquemment  
-- Utiliser les données de temps d'arrêt pour optimiser le stock de pièces et les interventions sur site  
+- Renforcer les canaux de communication entre les FSE intervenant fréquemment
 - Organiser des visites pour recueillir des informations sur les principaux analyseurs  
 
 ---
