@@ -13,8 +13,8 @@ Extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds, c
 
 ## 📂 Data Source & ETL (Power Query)
 
-   ### Data Import
-   - **Source Folder:** `FSE’s_Reports`
+### Data Import
+   - **Source Folder:** [FSE's_Reports](/FSE's_Reports/)
    - **File Used:** `fse_reports.xlsx`
    - Designed to **auto-update** when new reports are added to the source folder.
 
@@ -49,7 +49,7 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
       SUM(FSE_s_Reports[resolution_time_min]) / 60,
       DISTINCTCOUNT(FSE_s_Reports[report_id])
   )
-## 📈 Dashboard Insights
+## 📈 [Dashboard](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx) Insights
 
 ![Dashboard](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 
@@ -118,7 +118,7 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 ## 📂 Fuente de Datos y ETL (Power Query)
 
 ### Importación de Datos
-- **Carpeta de origen:** `FSE’s_Reports`
+- **Carpeta de origen:** [FSE's_Reports](/FSE's_Reports/)
 - **Archivo utilizado:** `fse_reports.xlsx`
 - Diseñado para **actualizarse automáticamente** cuando se agreguen nuevos reportes a la carpeta de origen.
 
@@ -154,7 +154,7 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
   )
   ```
 
-## 📈 Información del Tablero
+## 📈 Información del [Tablero](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
 
 ![Dashboard_es](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 
@@ -225,7 +225,7 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 ## 📂 Source de Données et ETL (Power Query)
 
 ### Importation des Données
-- **Dossier source :** `FSE’s_Reports`
+- **Dossier source :** [FSE's_Reports](/FSE's_Reports/)
 - **Fichier utilisé :** `fse_reports.xlsx`
 - Conçu pour **se mettre à jour automatiquement** lorsque de nouveaux rapports sont ajoutés au dossier source.
 
@@ -261,7 +261,7 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
   )
   ```
 
-## 📈 Aperçu du Tableau de Bord
+## 📈 Aperçu du [Tableau de Bord](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
 
 ![Dashboard_fr](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 
