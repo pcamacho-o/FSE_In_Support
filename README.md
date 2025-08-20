@@ -15,10 +15,17 @@ This repository brings together two analytical projects based on *synthetic* Fie
 Both projects aim to **identify intervention patterns, and support data-driven decisions**.  
 
 ### ⚠️ Important Note  
-All analyses are performed on **synthetic data** generated for demonstration and educational purposes. 
+All analyses are performed on **synthetic data** generated for demonstration and educational purposes.
+
 Example: Investigating the **CTE result set**, filtered by *on-site* interventions, we can verify the **same intervention_start date** each visit for one machine, *which is not a common behavior for an FSE*, causing a logical equal to **0** result when referencing the CTE in the MTBF SQL query.
 
+---
+CTE result set
+
 <img width="1918" height="1078" alt="CTE set" src="https://github.com/user-attachments/assets/35d52ed7-a2bd-4c0c-890b-adaaad5904d4" />
+
+---
+CTE Query
 
 ```sql
 
@@ -36,11 +43,13 @@ WITH ordered_visits AS (
 )
 
 ```
+---
+Result
 
-<img width="570" height="272" alt="Result MTBF" src="https://github.com/user-attachments/assets/bbd661cd-c775-48e5-b611-c68f0eb12978" />
+<img width="500" height="272" alt="Result MTBF" src="https://github.com/user-attachments/assets/bbd661cd-c775-48e5-b611-c68f0eb12978" />
 
-
-
+---
+### 📊
 I would be very **grateful and open** if any organization would like to collaborate by providing **real-world datasets** in order to conduct deeper, more meaningful analyses.  
 
 ---
@@ -57,9 +66,16 @@ Ambos proyectos buscan **identificar patrones de intervención, y apoyar decisio
 
 ### ⚠️ Nota Importante  
 Todos los análisis se realizan sobre **datos sintéticos** generados con fines demostrativos y educativos.
+
 Ejemplo: Al investigar el **conjunto de resultados CTE**, filtrado por intervenciones *in situ*, podemos verificar la **misma fecha de inicio de la intervención** en cada visita para una máquina, *lo cual no es un comportamiento habitual para un FSE*, provocando un resultado lógico igual a **0** al referenciar la CTE en la consulta SQL para el MTBF.
 
+---
+Conjunto de resultados CTE
+
 <img width="1918" height="1078" alt="CTE set" src="https://github.com/user-attachments/assets/35d52ed7-a2bd-4c0c-890b-adaaad5904d4" />
+
+---
+CTE Query
 
 ```sql
 
@@ -77,10 +93,13 @@ WITH ordered_visits AS (
 )
 
 ```
+---
+Result
 
-<img width="570" height="272" alt="Result MTBF" src="https://github.com/user-attachments/assets/bbd661cd-c775-48e5-b611-c68f0eb12978" />
+<img width="500" height="272" alt="Result MTBF" src="https://github.com/user-attachments/assets/bbd661cd-c775-48e5-b611-c68f0eb12978" />
 
-
+---
+### 📊
 Estaré muy **agradecido y abierto** si alguna organización desea colaborar proporcionando **datos reales** para realizar análisis más profundos y relevantes.  
 
 ---
@@ -97,9 +116,16 @@ Les deux projets visent à **identifier des tendances, et soutenir la prise de d
 
 ### ⚠️ Note Importante  
 Toutes les analyses sont réalisées sur des **données synthétiques**, créées à des fins de démonstration et d’apprentissage.
+
 Exemple : En investiguant **l'ensemble de résultats CTE**, filtré par interventions *sur site*, nous pouvons vérifier la **même date de début d'intervention** à chaque visite pour une machine, *ce qui n'est pas un comportement commun pour un FSE*, provoquant un résultat logique égal à **0** lors de la référence au CTE dans la requête SQL pour le MTBF.
 
+---
+Ensemble de résultats CTE
+
 <img width="1918" height="1078" alt="CTE set" src="https://github.com/user-attachments/assets/35d52ed7-a2bd-4c0c-890b-adaaad5904d4" />
+
+---
+CTE Query
 
 ```sql
 
@@ -118,6 +144,11 @@ WITH ordered_visits AS (
 
 ```
 
-<img width="570" height="272" alt="Result MTBF" src="https://github.com/user-attachments/assets/bbd661cd-c775-48e5-b611-c68f0eb12978" />
+---
+Result
 
+<img width="500" height="272" alt="Result MTBF" src="https://github.com/user-attachments/assets/bbd661cd-c775-48e5-b611-c68f0eb12978" />
+
+---
+### 📊
 Je serais très **reconnaissant et ouvert** si une organisation souhaitait collaborer en fournissant des **données réelles** afin de permettre des analyses plus approfondies et significatives.  
