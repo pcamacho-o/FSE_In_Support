@@ -16,12 +16,24 @@ Both projects aim to **identify intervention patterns, and support data-driven d
 
 ### ⚠️ Important Note  
 All analyses are performed on **synthetic data** generated for demonstration and educational purposes. 
-Example: Investigating following **CTE result set**, filtered for *on-site* visits, we can corroborate the **same intervention_start time** for each visit, *which is not a common behaivure of a FSE*, causing a logical result when the CTE is referenced on the MTBF SQL query.
+Example: Investigating the **CTE result set**, filtered by *on-site* interventions, we can verify the **same intervention_start date** each visit for one machine, *which is not a common behavior for an FSE*, causing a logical equal to **0** result when referencing the CTE in the MTBF SQL query.
 
-
+*image here*
 --- sql
-
+WITH ordered_visits AS (
+    SELECT *,
+        LAG(intervention_start) OVER (
+            PARTITION BY analyzer_id
+            ORDER BY intervention_start
+        ) AS prev_date
+    FROM fse_reports_chile
+    WHERE 
+    intervention_type = 'On-site Visit' AND
+    TRIM(analyzer_model) = 'Cobas 8000' AND
+    EXTRACT(YEAR FROM intervention_start) = 2025
+)
 ---
+*image here*
 
 
 I would be very **grateful and open** if any organization would like to collaborate by providing **real-world datasets** in order to conduct deeper, more meaningful analyses.  
@@ -39,7 +51,26 @@ Este repositorio reúne dos proyectos analíticos basados en datos *sintéticos*
 Ambos proyectos buscan **identificar patrones de intervención, y apoyar decisiones basadas en datos**.  
 
 ### ⚠️ Nota Importante  
-Todos los análisis se realizan sobre **datos sintéticos** generados con fines demostrativos y educativos.  
+Todos los análisis se realizan sobre **datos sintéticos** generados con fines demostrativos y educativos.
+Ejemplo: Al investigar el **conjunto de resultados CTE**, filtrado por intervenciones *in situ*, podemos verificar la **misma fecha de inicio de la intervención** en cada visita para una máquina, *lo cual no es un comportamiento habitual para un FSE*, provocando un resultado lógico igual a **0** al referenciar la CTE en la consulta SQL para el MTBF.
+
+*image here*
+--- sql
+WITH ordered_visits AS (
+    SELECT *,
+        LAG(intervention_start) OVER (
+            PARTITION BY analyzer_id
+            ORDER BY intervention_start
+        ) AS prev_date
+    FROM fse_reports_chile
+    WHERE 
+    intervention_type = 'On-site Visit' AND
+    TRIM(analyzer_model) = 'Cobas 8000' AND
+    EXTRACT(YEAR FROM intervention_start) = 2025
+)
+---
+*image here*
+
 
 Estaré muy **agradecido y abierto** si alguna organización desea colaborar proporcionando **datos reales** para realizar análisis más profundos y relevantes.  
 
@@ -56,6 +87,24 @@ Ce dépôt réunit deux projets analytiques basés sur des données *synthétiqu
 Les deux projets visent à **identifier des tendances, et soutenir la prise de décision basée sur les données**.  
 
 ### ⚠️ Note Importante  
-Toutes les analyses sont réalisées sur des **données synthétiques**, créées à des fins de démonstration et d’apprentissage.  
+Toutes les analyses sont réalisées sur des **données synthétiques**, créées à des fins de démonstration et d’apprentissage.
+Exemple : En investiguant **l'ensemble de résultats CTE**, filtré par interventions *sur site*, nous pouvons vérifier la **même date de début d'intervention** à chaque visite pour une machine, *ce qui n'est pas un comportement commun pour un FSE*, provoquant un résultat logique égal à **0** lors de la référence au CTE dans la requête SQL pour le MTBF.
+
+*image here*
+--- sql
+WITH ordered_visits AS (
+    SELECT *,
+        LAG(intervention_start) OVER (
+            PARTITION BY analyzer_id
+            ORDER BY intervention_start
+        ) AS prev_date
+    FROM fse_reports_chile
+    WHERE 
+    intervention_type = 'On-site Visit' AND
+    TRIM(analyzer_model) = 'Cobas 8000' AND
+    EXTRACT(YEAR FROM intervention_start) = 2025
+)
+---
+*image here*  
 
 Je serais très **reconnaissant et ouvert** si une organisation souhaitait collaborer en fournissant des **données réelles** afin de permettre des analyses plus approfondies et significatives.  
