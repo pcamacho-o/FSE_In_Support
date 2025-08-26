@@ -2,12 +2,57 @@
 
 **Language:** [🇬🇧 English](#en) | [🇪🇸 Español](#es) | [🇫🇷 Français](#fr)
 
----
-
 ## <a name="en"></a>🇬🇧 English
 ## 📌 Project Overview
 This analytical project consolidates synthetic Field Service Engineer (FSE) intervention reports in Chile to identify patterns, improve efficiency, and support data-driven decisions.  
 Extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds, cleaning and transforming via **Power Query**, modeled with **Power Pivot / DAX**, and visualized in **Excel Dashboards**.
+
+---
+## 📈 [Dashboard](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
+
+![Dashboard](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
+
+### 🎯 Slicers
+1. **Analyzer**
+2. **Spare Part**
+3. **Status After Intervention**
+4. **Model**
+5. **Intervention Type**
+
+---
+
+### 📊 Visuals
+
+1. **FSEs**
+- Average Resolution Time (hrs)
+- Number of Interventions
+
+2. **Spare Parts**
+- Downtime (Avg-hr)
+- Replacement Count
+
+3. **Downtime Analyzers**
+- Total Downtime (hrs)
+
+---
+
+## ❓ Analysis
+
+<img width="1897" height="753" alt="Dashboard_img" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
+### 1. Spare Part Causing Most Downtime Relative to Replacement Frequency
+**Pivot Table:**  
+1. Rows: 
+* `Spare Part`  
+2. Values: 
+* `Count of Replacements`
+* `Downtime per Intervention (hrs)`  
+
+**Key Insight:**  
+1. Highest replacement frequency: 
+* **Heating Element** — 7 replacements and avg downtime **2.9 hrs**  
+2. Longest downtime: 
+* **Light Source** — 1 replacement and as downtime **4.6 hrs**
 
 ---
 
@@ -49,54 +94,13 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
       SUM(FSE_s_Reports[resolution_time_min]) / 60,
       DISTINCTCOUNT(FSE_s_Reports[report_id])
   )
-## 📈 [Dashboard](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx) Insights
-
-![Dashboard](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
-
-### 🎯 Slicers
-- **Analyzer**
-- **Spare Part**
-- **Status After Intervention**
-- **Model**
-- **Intervention Type**
-
----
-
-### 📊 Visuals
-
-#### FSE’s
-- Average Resolution Time (hrs)
-- Number of Interventions
-
-#### Spare Parts
-- Downtime (Avg-hr)
-- Replacement Count
-
-#### Downtime Analyzers
-- Total Downtime (hrs)
-
----
-
-## ❓ Analysis Q&A
-
-<img width="1897" height="753" alt="Dashboard_img" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
-
-### 1. Spare Part Causing Most Downtime Relative to Replacement Frequency
-**Pivot Table:**  
-- Rows = `Spare Part`  
-- Values = `Count of Replacements`, `Downtime per Intervention (hrs)`  
-
-**Key Insight:**  
-- Highest replacement frequency: **Heating Element** — 7 replacements, avg downtime **2.9 hrs**  
-- Highest downtime: **Light Source** — 1 replacement, downtime **4.6 hrs**
 
 ---
 
 ## 📌 Conclusions
-- Develop targeted training materials for high-downtime spare parts  
-- Experienced FSE’s for new client installations
+- Develop targeted training materials for high-downtime spare parts 
 - Chapperone new engeneers for first installations  
-- Strengthen communication channels between frequently involved FSE’s  
+- Strengthen communication channels between frequently involved FSEs  
 - Organize visits to get on-site information of top analyzers  
 
 ---
@@ -112,6 +116,54 @@ Extracted from **Column F** (format: `YYYY-MM-DD HH:MM - HH:MM`).
 ## 📌 Resumen del Proyecto
 Este proyecto analítico consolida informes sintéticos de intervenciones de Ingenieros de Servicio en Terreno (FSE) en Chile para identificar patrones, mejorar la eficiencia y apoyar decisiones basadas en datos.  
 Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpian y transforman con **Power Query**, se modelan con **Power Pivot / DAX**, y se visualizan en **Tableros de Excel**.
+
+---
+
+## 📈 [Tablero](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
+
+![Dashboard_es](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
+
+### 🎯 Segmentadores
+1. **Analizador**
+2. **Repuesto**
+3. **Estado después de la intervención**
+4. **Modelo**
+5. **Tipo de intervención**
+
+---
+
+### 📊 Visuales
+
+1. **FSEs**
+- Tiempo promedio de resolución (hrs)
+- Número de intervenciones
+
+2. **Repuestos**
+- Tiempo de inactividad (Media hrs)
+- Conteo de reemplazos
+
+3. **Analizadores con inactividad**
+- Tiempo total de inactividad (hrs)
+
+---
+
+## ❓ Análisis
+
+<img width="1897" height="753" alt="Dashboard_imges" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
+### 1. Repuesto que causa mayor inactividad en relación a la frecuencia de reemplazo
+**Tabla dinámica:**  
+1. Filas: 
+* `Repuesto`  
+2. Valores: 
+* `Conteo de reemplazos`
+* `Tiempo de inactividad por intervención (hrs)`  
+
+**Datos clave:**  
+1. Mayor frecuencia de reemplazo:
+* **Elemento calefactor** — 7 reemplazos con media de inactividad de **2,9 hrs**  
+2. Mayor tiempo de inactividad:
+* **Fuente de luz** — 1 reemplazo con inactividad de **4,6 hrs**  
 
 ---
 
@@ -154,57 +206,15 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
   )
   ```
 
-## 📈 Información del [Tablero](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
-
-![Dashboard_es](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
-
-### 🎯 Segmentadores
-- **Analizador**
-- **Repuesto**
-- **Estado después de la intervención**
-- **Modelo**
-- **Tipo de intervención**
-
----
-
-### 📊 Visuales
-
-#### FSE’s
-- Tiempo promedio de resolución (hrs)
-- Número de intervenciones
-
-#### Repuestos
-- Tiempo de inactividad (promedio hrs)
-- Conteo de reemplazos
-
-#### Analizadores con inactividad
-- Tiempo total de inactividad (hrs)
-
----
-
-## ❓ Preguntas y Respuestas del Análisis
-
-<img width="1897" height="753" alt="Dashboard_imges" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
-
-### 1. Repuesto que causa mayor inactividad en relación a la frecuencia de reemplazo
-**Tabla dinámica:**  
-- Filas = `Repuesto`  
-- Valores = `Conteo de reemplazos`, `Tiempo de inactividad por intervención (hrs)`  
-
-**Hallazgo clave:**  
-- Mayor frecuencia de reemplazo: **Elemento calefactor** — 7 reemplazos, promedio de inactividad **2,9 hrs**  
-- Mayor tiempo de inactividad: **Fuente de luz** — 1 reemplazo, inactividad **4,6 hrs**  
-- **Nota:** Si el problema no se resuelve → la máquina permanece fuera de servicio hasta la próxima visita
 
 ---
 
 
 ## 📌 Conclusiones
-- Desarrollar material de capacitación específico para repuestos con alta inactividad  
-- FSE con experiencia a nuevas instalaciones de clientes  
+- Desarrollar material de capacitación específico para repuestos con alta inactividad   
 - Acompañar a nuevos ingenieros en sus primeras instalaciones  
-- Fortalecer canales de comunicación entre FSE que intervienen con frecuencia
-- Organizar visitas para obtener información en sitio de los analizadores principales  
+- Fortalecer canales de comunicación con FSEs frecuentes
+- Organizar visitas para obtener información in-situ de los analizadores observados   
 
 ---
 
@@ -219,6 +229,54 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 ## 📌 Aperçu du Projet
 Ce projet analytique consolide les rapports synthétiques d'intervention des Ingénieurs de Service sur le Terrain (FSE) au Chili pour identifier des tendances, améliorer l’efficacité et soutenir les décisions basées sur les données.  
 Les données sont extraites de solutions FSN telles que Synchroteam ou des feuilles Excel, nettoyées et transformées via **Power Query**, modélisées avec **Power Pivot / DAX**, et visualisées dans des **tableaux de bord Excel**.
+
+---
+
+## 📈 Aperçu du [Tableau de Bord](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
+
+![Dashboard_fr](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
+
+### 🎯 Segments
+1. **Analyseur**
+2. **Pièce de rechange**
+3. **Statut après intervention**
+4. **Modèle**
+5. **Type d'intervention**
+
+---
+
+### 📊 Visuels
+
+1. **FSEs**
+- Temps moyen de résolution (hrs)
+- Nombre d'interventions
+
+2. **Pièces de rechange**
+- Temps d'arrêt (moyenne hrs)
+- Nombre de remplacements
+
+3. **Analyseurs en panne**
+- Temps d'arrêt total (hrs)
+
+---
+
+## ❓ Analyse
+
+<img width="1897" height="753" alt="Dashboard_imgfr" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
+
+### 1. Pièce de rechange causant le plus de temps d'arrêt par rapport à la fréquence de remplacement
+**Tableau croisé dynamique :**  
+1. Lignes:  
+* `Pièce de rechange`  
+2. Valeurs:  
+* `Nombre de remplacements`
+* `Temps d'arrêt par intervention (hrs)`  
+
+**Points clés :**  
+1. Fréquence de remplacement la plus élevée : 
+* **Élément chauffant** — 7 remplacements et temps d'arrêt moyen **2,9 hrs**  
+2. Temps d'arrêt le plus élevé : 
+* **Source lumineuse** — 1 remplacement et temps d'arrêt **4,6 hrs**
 
 ---
 
@@ -261,56 +319,14 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
   )
   ```
 
-## 📈 Aperçu du [Tableau de Bord](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
-
-![Dashboard_fr](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
-
-### 🎯 Segments
-- **Analyseur**
-- **Pièce de rechange**
-- **Statut après intervention**
-- **Modèle**
-- **Type d'intervention**
-
----
-
-### 📊 Visuels
-
-#### FSE’s
-- Temps moyen de résolution (hrs)
-- Nombre d'interventions
-
-#### Pièces de rechange
-- Temps d'arrêt (moyenne hrs)
-- Nombre de remplacements
-
-#### Analyseurs en panne
-- Temps d'arrêt total (hrs)
-
----
-
-## ❓ Q&R de l’Analyse
-
-<img width="1897" height="753" alt="Dashboard_imgfr" src="https://github.com/user-attachments/assets/e17376f0-29a3-4dc5-8ff8-b6e43fc07e17" />
-
-### 1. Pièce de rechange causant le plus de temps d'arrêt par rapport à la fréquence de remplacement
-**Tableau croisé dynamique :**  
-- Lignes = `Pièce de rechange`  
-- Valeurs = `Nombre de remplacements`, `Temps d'arrêt par intervention (hrs)`  
-
-**Conclusion clé :**  
-- Fréquence de remplacement la plus élevée : **Élément chauffant** — 7 remplacements, temps d'arrêt moyen **2,9 hrs**  
-- Temps d'arrêt le plus élevé : **Source lumineuse** — 1 remplacement, temps d'arrêt **4,6 hrs**  
-- **Remarque :** Si le problème n'est pas résolu → la machine reste hors service jusqu'à la prochaine visite
 
 ---
 
 ## 📌 Conclusions
 - Développer du matériel de formation ciblé pour les pièces ayant un fort temps d'arrêt  
-- FSE expérimentés aux nouvelles installations clients  
 - Accompagner les nouveaux ingénieurs lors de leurs premières installations  
-- Renforcer les canaux de communication entre les FSE intervenant fréquemment
-- Organiser des visites pour recueillir des informations sur les principaux analyseurs  
+- Renforcer les canaux de communication entre les FSEs intervenant fréquemment
+- Organiser des visites pour recueillir des informations les analyseurs observés 
 
 ---
 
@@ -319,4 +335,4 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 - **Source de données :** `fse_reports.xlsx` + nouveaux fichiers ajoutés  
 - **Visualisation :** Tableau de bord Excel 
 
-
+---
