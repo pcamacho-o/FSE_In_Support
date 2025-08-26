@@ -19,7 +19,7 @@ Aiming to **identify intervention patterns, and support data-driven decisions**.
 ### ⚠️ Important Note  
 All analyses are performed on **synthetic data** generated for demonstration and educational purposes.
 
-Example: Investigating the **CTE result set**, filtered by *on-site* interventions, we can verify the **same intervention_start date** each visit for one machine, *which is not a common behavior for an FSE*, causing a logical equal to **0** result when referencing the CTE in the MTBF SQL query.
+Example: Inspecting the **CTE result set**, filtered by *on-site* interventions, we can verify the **same intervention_start date** each visit for one machine, *which is not a common behavior for an FSE*, causing a logical equal to **0** result when referencing the CTE in the MTBF SQL query.
 
 ---
 CTE result set
@@ -70,7 +70,7 @@ Como objetivo, los proyectos buscan **identificar patrones de intervención, y a
 ### ⚠️ Nota Importante  
 Todos los análisis se realizan sobre **datos sintéticos** generados con fines demostrativos y educativos.
 
-Ejemplo: Al investigar el **conjunto de resultados CTE**, filtrado por intervenciones *in situ*, podemos verificar la **misma fecha de inicio de la intervención** en cada visita para una máquina, *lo cual no es un comportamiento habitual para un FSE*, provocando un resultado lógico igual a **0** al referenciar la CTE en la consulta SQL para el MTBF.
+Ejemplo: Al inspeccionar el **conjunto de resultados CTE**, filtrado por intervenciones *in situ*, podemos verificar la **misma fecha de inicio de la intervención** en cada visita para una máquina, *lo cual no es un comportamiento habitual para un FSE*, provocando un resultado lógico igual a **0** al referenciar la CTE en la consulta SQL para el MTBF.
 
 ---
 Conjunto de resultados CTE
@@ -121,7 +121,7 @@ Les projets visent à **identifier des tendances, et soutenir la prise de décis
 ### ⚠️ Note Importante  
 Toutes les analyses sont réalisées sur des **données synthétiques**, créées à des fins de démonstration et d’apprentissage.
 
-Exemple : En investiguant **l'ensemble de résultats CTE**, filtré par interventions *sur site*, nous pouvons vérifier la **même date de début d'intervention** à chaque visite pour une machine, *ce qui n'est pas un comportement commun pour un FSE*, provoquant un résultat logique égal à **0** lors de la référence au CTE dans la requête SQL pour le MTBF.
+Exemple : En inspectant **l'ensemble de résultats CTE**, filtré par interventions *sur site*, nous pouvons vérifier la **même date de début d'intervention** à chaque visite pour une machine, *ce qui n'est pas un comportement commun pour un FSE*, provoquant un résultat logique égal à **0** lors de la référence au CTE dans la requête SQL pour le MTBF.
 
 ---
 Ensemble de résultats CTE
