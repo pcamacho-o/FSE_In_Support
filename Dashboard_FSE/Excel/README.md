@@ -8,7 +8,7 @@ This analytical project consolidates synthetic Field Service Engineer (FSE) inte
 Extracting data from FSN solution suchs as Synchroteam, or excel spreadsheeds, cleaning and transforming via **Power Query**, modeled with **Power Pivot / DAX**, and visualized in **Excel Dashboards**.
 
 ---
-## 📈 [Dashboard](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
+## 📈 [Dashboard](/Dashboard_FSE/Excel/FSE_dashboard_reports_chile.xlsx)
 
 ![Dashboard](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 
@@ -119,7 +119,7 @@ Se extraen datos de soluciones FSN como Synchroteam o planillas Excel, se limpia
 
 ---
 
-## 📈 [Tablero](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
+## 📈 [Tablero](/Dashboard_FSE/Excel/FSE_dashboard_reports_chile.xlsx)
 
 ![Dashboard_es](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 
@@ -232,7 +232,7 @@ Les données sont extraites de solutions FSN telles que Synchroteam ou des feuil
 
 ---
 
-## 📈 Aperçu du [Tableau de Bord](/Dashboar_FSE/FSE_dashboard_reports_chile.xlsx)
+## 📈 [Tableau de Bord](/Dashboard_FSE/Excel/FSE_dashboard_reports_chile.xlsx)
 
 ![Dashboard_fr](https://github.com/user-attachments/assets/c22ec29a-678a-49fa-9d80-9c9e1cedae51)
 
