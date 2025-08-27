@@ -59,7 +59,7 @@ I would be very **grateful and open** if any organization would like to collabor
 ## <a name="es"></a>🇪🇸 Español  
 
 ### 📌 Descripción del Proyecto  
-Este repositorio reúne dos proyectos analíticos basados en datos *sintéticos* de reportes de intervenciones de Ingenieros de Servicio de Campo (FSEs) en Chile para analizadores de diagnóstico in vitro:  
+Este repositorio reúne tres proyectos analíticos basados en datos *sintéticos* de reportes de intervenciones de Ingenieros de Servicio de Campo (FSEs) en Chile para analizadores de diagnóstico in vitro:  
 
 1. [**Proyecto de Dashboard en Power BI**](/Dashboard_FSE/Power%20BI/) – ETL con **Power Query**, modelado con **DAX**, y visualización mediante tableros interactivos.
 2. [**Proyecto de Dashboard en Excel**](/Dashboard_FSE/Excel/) – ETL con **Power Query**, modelado con **Power Pivot/DAX**, y visualización mediante tableros interactivos.    
@@ -110,7 +110,7 @@ Estaré muy **agradecido y abierto** si alguna organización desea colaborar pro
 ## <a name="fr"></a>🇫🇷 Français  
 
 ### 📌 Présentation du Projet  
-Ce dépôt réunit deux projets analytiques basés sur des données *synthétiques* provenant des rapports d’interventions des Ingénieurs de Service (FSE) au Chili pour les analyseurs de diagnostic in vitro :  
+Ce dépôt réunit trois projets analytiques basés sur des données *synthétiques* provenant des rapports d’interventions des Ingénieurs de Service (FSE) au Chili pour les analyseurs de diagnostic in vitro :  
 
 1. [**Projet Tableau de Bord Power BI**](/Dashboard_FSE/Power%20BI/) – ETL avec **Power Query**, modélisation avec **DAX**, et visualisation via des tableaux de bord interactifs.
 2. [**Projet Tableau de Bord Excel**](/Dashboard_FSE/Excel/) – ETL avec **Power Query**, modélisation avec **Power Pivot/DAX**, et visualisation via des tableaux de bord interactifs.  
