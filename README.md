@@ -9,9 +9,9 @@
 ### 📌 Project Overview  
 This repository brings together three analytical projects based on *synthetic* Field Service Engineers (FSE) intervention reports in Chile for in-vitro diagnostic analyzers:  
 
-1. [**Power BI Dashboard Project**](/Dashboard_FSE/Power%20BI/) – ETL using **Power Query**, modeling with **DAX**, and visualization through interactive dashboard. 
-2. [**Excel Dashboard Project**](/Dashboard_FSE/Excel/) – ETL using **Power Query**, modeling with **Power Pivot/DAX**, and visualization through interactive dashboard.  
-3. [**SQL Analysis Project**](/SQL_FSE/) – Analytical queries in **PostgreSQL** to calculate Mean Time Between Failures (MTBF), and spare parts impact.
+1. [**Power BI Dashboard**](/Dashboard_FSE/Power%20BI/) – ETL using **Power Query**, modeling with **DAX**, and visualization through interactive dashboard. 
+2. [**Excel Dashboard**](/Dashboard_FSE/Excel/) – ETL using **Power Query**, modeling with **Power Pivot/DAX**, and visualization through interactive dashboard.  
+3. [**SQL Analysis**](/SQL_FSE/) – Analytical queries in **PostgreSQL** to calculate Mean Time Between Failures (MTBF), and spare parts impact.
 
 
 Aiming to **identify intervention patterns, and support data-driven decisions**.  
@@ -61,9 +61,9 @@ I would be very **grateful and open** if any organization would like to collabor
 ### 📌 Descripción del Proyecto  
 Este repositorio reúne tres proyectos analíticos basados en datos *sintéticos* de reportes de intervenciones de Ingenieros de Servicio de Campo (FSEs) en Chile para analizadores de diagnóstico in vitro:  
 
-1. [**Proyecto de Dashboard en Power BI**](/Dashboard_FSE/Power%20BI/) – ETL con **Power Query**, modelado con **DAX**, y visualización mediante tableros interactivos.
-2. [**Proyecto de Dashboard en Excel**](/Dashboard_FSE/Excel/) – ETL con **Power Query**, modelado con **Power Pivot/DAX**, y visualización mediante tableros interactivos.    
-3. [**Proyecto de Análisis SQL**](/SQL_FSE/) – Consultas analíticas en **PostgreSQL** para calcular MTBF y el impacto al reemplazar un repuesto.  
+1. [**Dashboard en Power BI**](/Dashboard_FSE/Power%20BI/) – ETL con **Power Query**, modelado con **DAX**, y visualización mediante tableros interactivos.
+2. [**Dashboard en Excel**](/Dashboard_FSE/Excel/) – ETL con **Power Query**, modelado con **Power Pivot/DAX**, y visualización mediante tableros interactivos.    
+3. [**Análisis SQL**](/SQL_FSE/) – Consultas analíticas en **PostgreSQL** para calcular MTBF y el impacto al reemplazar un repuesto.  
 
 Como objetivo, los proyectos buscan **identificar patrones de intervención, y apoyar decisiones basadas en datos**.  
 
@@ -112,9 +112,9 @@ Estaré muy **agradecido y abierto** si alguna organización desea colaborar pro
 ### 📌 Présentation du Projet  
 Ce dépôt réunit trois projets analytiques basés sur des données *synthétiques* provenant des rapports d’interventions des Ingénieurs de Service (FSE) au Chili pour les analyseurs de diagnostic in vitro :  
 
-1. [**Projet Tableau de Bord Power BI**](/Dashboard_FSE/Power%20BI/) – ETL avec **Power Query**, modélisation avec **DAX**, et visualisation via des tableaux de bord interactifs.
-2. [**Projet Tableau de Bord Excel**](/Dashboard_FSE/Excel/) – ETL avec **Power Query**, modélisation avec **Power Pivot/DAX**, et visualisation via des tableaux de bord interactifs.  
-3. [**Projet d’Analyse SQL**](/SQL_FSE/) – Requêtes analytiques sous **PostgreSQL** pour calculer le MTBF et l'impact lie au remplaçement d'une pièce détachée. 
+1. [**Tableau de Bord Power BI**](/Dashboard_FSE/Power%20BI/) – ETL avec **Power Query**, modélisation avec **DAX**, et visualisation via des tableaux de bord interactifs.
+2. [**Tableau de Bord Excel**](/Dashboard_FSE/Excel/) – ETL avec **Power Query**, modélisation avec **Power Pivot/DAX**, et visualisation via des tableaux de bord interactifs.  
+3. [**Analyse SQL**](/SQL_FSE/) – Requêtes analytiques sous **PostgreSQL** pour calculer le MTBF et l'impact lie au remplaçement d'une pièce détachée. 
 
 Les projets visent à **identifier des tendances, et soutenir la prise de décision basée sur les données**.  
 
