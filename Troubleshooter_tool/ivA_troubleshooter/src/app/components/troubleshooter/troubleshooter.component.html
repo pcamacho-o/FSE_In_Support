@@ -1,0 +1,45 @@
+    <mat-toolbar color="primary">ivA Troubleshooter</mat-toolbar>
+
+    <div class="container" *ngIf="!loading && data; else loadingTpl">
+    <mat-form-field appearance="fill" style="width:100%;">
+        <mat-label>Symptom</mat-label>
+        <mat-select [value]="selectedLabel" (selectionChange)="selectSymptom($event.value)">
+        <mat-option *ngFor="let label of symptomLabels" [value]="label">{{ label }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-card *ngIf="currentStep; else finishedTpl">
+        <mat-card-header>
+        <mat-card-title>Step {{ currentStep.id }}</mat-card-title>
+        <mat-card-subtitle *ngIf="currentStep.module">{{ currentStep.module.replace('_',' ') | titlecase }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <img mat-card-image
+            *ngIf="currentStep.module && data?.modules[currentStep.module]"
+            [src]="data?.modules[currentStep.module].image"
+            [alt]="currentStep.module">
+
+        <mat-card-content>
+        <p><strong>Instruction:</strong> {{ currentStep.instruction }}</p>
+        <p><strong>Detail:</strong> {{ currentStep.detail }}</p>
+        <p><strong>Evidence:</strong> {{ currentStep.evidence }}</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="goNext(true)">✅ Pass</button>
+        <button mat-raised-button color="warn" (click)="goNext(false)">❌ Fail</button>
+        </mat-card-actions>
+    </mat-card>
+    </div>
+
+    <ng-template #loadingTpl>
+    <div class="center">Loading flow…</div>
+    </ng-template>
+
+    <ng-template #finishedTpl>
+    <mat-card>
+        <mat-card-content>
+        <p>Flow finished or no next step. You can restart by choosing another symptom.</p>
+        </mat-card-content>
+    </mat-card>
+    </ng-template>
