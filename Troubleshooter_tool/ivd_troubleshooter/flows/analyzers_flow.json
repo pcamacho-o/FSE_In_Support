@@ -1,0 +1,307 @@
+{
+    "modules": {
+        "power_supply": {
+            "image": "assets/power_supply.png"
+        },
+        "arm_module": {
+            "image": "assets/arm_module.png"
+        },
+        "barcode_reader": {
+            "image": "assets/barcode_reader.png"
+        },
+        "optics_module": {
+            "image": "assets/optics_module.png"
+        },
+        "fluidics_module": {
+            "image": "assets/fluidics_module.png"
+        },
+        "reagent_module": {
+            "image": "assets/reagent_module.png"
+        },
+        "conveyor_module": {
+            "image": "assets/conveyor_module.png"
+        },
+        "cuvette_loader": {
+            "image": "assets/cuvette_loader.png"
+        }
+    },
+    "symptoms": [
+        {
+            "id": "O1",
+            "label": "Unclear results",
+            "module_hint": ["optics_module", "fluidics_module", "power_supply"],
+            "error_codes": ["E201", "E305", "E422"],
+            "steps": [
+                {
+                "id": "O1-01",
+                "module": "optics_module",
+                "instruction": "Re-run optics calibration",
+                "detail": "Make sure there is no misalignment between emitter and receiving fibers, and the optics lens is clean.",
+                "evidence": "Retry acquisition test. If fail persists, continue.",
+                "on_fail_next": "O1-02",
+                "on_pass_next": "O1-03"
+                },
+                {
+                "id": "O1-02",
+                "module": "power_supply",
+                "instruction": "Check the Acquisition PCB voltage input",
+                "detail": "Ensure the Acquisition PCB receives 12V ± 0.5V according to documentation.",
+                "evidence": "Retry acquisition test. If fail persists, continue.",
+                "on_fail_next": "O1-04",
+                "on_pass_next": "O1-03"
+                },
+                {
+                "id": "O1-03",
+                "module": "fluidics_module",
+                "instruction": "Check sample probe cleanliness",
+                "detail": "Remove and visually inspect the probe for clogs or residual reagent.",
+                "evidence": "Run a probe rinse and retry.",
+                "on_fail_next": "O1-04",
+                "on_pass_next": "O1-04"
+                },
+                {
+                "id": "O1-04",
+                "module": "optics_module",
+                "instruction": "Check lamp/LED intensity",
+                "detail": "Ensure the optics lamp/LED output is within acceptable range.",
+                "evidence": "Run the internal intensity test.",
+                "on_fail_next": "O1-05",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "O1-05",
+                "module": "optics_module",
+                "instruction": "Replace the reference filter",
+                "detail": "Swap with a spare reference filter and recalibrate.",
+                "evidence": "Perform acquisition test again.",
+                "on_fail_next": "escalate",
+                "on_pass_next": "close"
+                }
+            ]
+            },
+            {
+            "id": "R1",
+            "label": "Error while pippeting in reagent compartment",
+            "module_hint": ["reagent_module", "arm_module", "fluidics_module"],
+            "error_codes": ["E109", "E401", "E512"],
+            "steps": [
+                {
+                "id": "R1-01",
+                "module": "arm_module",
+                "instruction": "Verify needle mapping",
+                "detail": "Check arm X/Y/Z coordinates with mapping tool, perform mapping if needed.",
+                "evidence": "Re-run test with dummy reagent cup.",
+                "on_fail_next": "R1-02",
+                "on_pass_next": "R1-02"
+                },
+                {
+                "id": "R1-02",
+                "module": "fluidics_module",
+                "instruction": "Check vacuum pump pressure",
+                "detail": "Ensure vacuum pressure is within -200 to -250 mbar.",
+                "evidence": "Connect vacuum tool, run pump test.",
+                "on_fail_next": "R1-04",
+                "on_pass_next": "R1-05"
+                },
+                {
+                "id": "R1-03",
+                "module": "reagent_module",
+                "instruction": "Check communication PCB signals and firmware.",
+                "detail": "Verify reagent A zone signals, check firmware version and update if needed.",
+                "evidence": "Download logs.",
+                "on_fail_next": "escalate",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "R1-04",
+                "module": "arm_module",
+                "instruction": "Inspect needle tip for clogging",
+                "detail": "Remove needle, flush with cleaning solution.",
+                "evidence": "Run pipetting test on distilled water.",
+                "on_fail_next": "R1-05",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "R1-05",
+                "module": "fluidics_module",
+                "instruction": "Inspect tubing connections",
+                "detail": "Check for leaks or loose fittings between pump and needle.",
+                "evidence": "Run full fluidic test sequence.",
+                "on_fail_next": "R1-03",
+                "on_pass_next": "close"
+                }
+            ]
+            },
+            {
+            "id": "B1",
+            "label": "Barcode reader not detecting tubes",
+            "module_hint": ["barcode_reader", "conveyor_module", "power_supply"],
+            "error_codes": ["E703", "E704", "E801"],
+            "steps": [
+                {
+                "id": "B1-01",
+                "module": "barcode_reader",
+                "instruction": "Clean barcode scanner window",
+                "detail": "Use lint-free cloth with 70% isopropanol.",
+                "evidence": "Retry tube scan.",
+                "on_fail_next": "B1-02",
+                "on_pass_next": "B1-03"
+                },
+                {
+                "id": "B1-02",
+                "module": "conveyor_module",
+                "instruction": "Check tube alignment on conveyor",
+                "detail": "Ensure tubes sit upright and aligned with scanner window.",
+                "evidence": "Retry tube scan.",
+                "on_fail_next": "B1-03",
+                "on_pass_next": "B1-03"
+                },
+                {
+                "id": "B1-03",
+                "module": "barcode_reader",
+                "instruction": "Verify scanner laser/LED output",
+                "detail": "Run scanner test via service software.",
+                "evidence": "Check signal strength report.",
+                "on_fail_next": "B1-04",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "B1-04",
+                "module": "power_supply",
+                "instruction": "Check barcode reader PCB supply voltage",
+                "detail": "Ensure stable 5V ± 0.1V input.",
+                "evidence": "Measure with multimeter.",
+                "on_fail_next": "B1-05",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "B1-05",
+                "module": "barcode_reader",
+                "instruction": "Replace scanner module",
+                "detail": "Install spare reader and recalibrate.",
+                "evidence": "Retry scan with known-valid tube.",
+                "on_fail_next": "escalate",
+                "on_pass_next": "B1-03"
+                }
+            ]
+            },
+            {
+            "id": "C1",
+            "label": "Cuvette loader jam",
+            "module_hint": ["cuvette_loader", "conveyor_module", "arm_module"],
+            "error_codes": ["E905", "E906", "E920"],
+            "steps": [
+                {
+                "id": "C1-01",
+                "module": "cuvette_loader",
+                "instruction": "Clear physical jam",
+                "detail": "Remove cuvettes stuck in the loading track.",
+                "evidence": "Retry cuvette load.",
+                "on_fail_next": "C1-02",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "C1-02",
+                "module": "conveyor_module",
+                "instruction": "Check motor belt tension",
+                "detail": "Verify proper tension on conveyor belt moving cuvettes.",
+                "evidence": "Run conveyor motor test.",
+                "on_fail_next": "C1-03",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "C1-03",
+                "module": "cuvette_loader",
+                "instruction": "Check sensor alignment",
+                "detail": "Ensure loader optical sensor is properly aligned.",
+                "evidence": "Test cuvette loader sensor.",
+                "on_fail_next": "C1-04",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "C1-04",
+                "module": "arm_module",
+                "instruction": "Inspect cuvette gripper",
+                "detail": "Ensure arm gripper is not loose or damaged.",
+                "evidence": "Run manual pick-and-place test.",
+                "on_fail_next": "C1-05",
+                "on_pass_next": "close"
+                },
+                {
+                "id": "C1-05",
+                "module": "conveyor_module",
+                "instruction": "Lubricate guide rails",
+                "detail": "Apply manufacturer-approved lubricant to loader rails.",
+                "evidence": "Retry full cuvette load cycle.",
+                "on_fail_next": "escalate",
+                "on_pass_next": "close"
+                }
+            ]
+            },
+            {
+            "id": "F1",
+            "label": "Unexpected fluid leak",
+            "module_hint": ["fluidics_module", "reagent_module", "arm_module"],
+            "error_codes": ["E601", "E615", "E633"],
+            "steps": [
+                {
+                "id": "F1-01",
+                "module": "fluidics_module",
+                "instruction": "Inspect tubing for cracks",
+                "detail": "Look for visible cracks or leaks in transparent tubing.",
+                "evidence": "Run visual check with flashlight.",
+                "on_fail_next": "F1-02",
+                "on_pass_next": "F1-02"
+                },
+                {
+                "id": "F1-02",
+                "module": "reagent_module",
+                "instruction": "Check main recervoir seals",
+                "detail": "Verify recervoir is tightly closed and sealed.",
+                "evidence": "Check for moisture around caps.",
+                "on_fail_next": "F1-03",
+                "on_pass_next": "F1-03"
+                },
+                {
+                "id": "F1-03",
+                "module": "arm_module",
+                "instruction": "Check needle o-rings",
+                "detail": "Inspect o-rings on pipetting needles for wear or cracks.",
+                "evidence": "Replace if necessary.",
+                "on_fail_next": "F1-04",
+                "on_pass_next": "F1-04"
+                },
+                {
+                "id": "F1-04",
+                "module": "fluidics_module",
+                "instruction": "Check waste line integrity",
+                "detail": "Ensure waste tubing is securely connected and not clogged.",
+                "evidence": "Run flush test.",
+                "on_fail_next": "F1-05",
+                "on_pass_next": "F1-05"
+                },
+                {
+                "id": "F1-05",
+                "module": "fluidics_module",
+                "instruction": "Test pump seals",
+                "detail": "Verify pump membranes are not damaged.",
+                "evidence": "Run pressure holding test.",
+                "on_fail_next": "escalate",
+                "on_pass_next": "close"
+                }
+            ]
+            }
+        ],
+        "escalation": {
+            "id": "escalate",
+            "instruction": "If the issue persists, please contact hotline support.",
+            "detail": "Provide logs, and step outcomes.",
+            "evidence": "Attach error codes and test results."
+    },
+        "close procedure": {
+            "id": "close",
+            "instruction": "✅ Issue resolved, perform endurence and closing procedure.",
+            "detail": "As mentioned in documentation xxxx, perform endurence and QC.",
+            "evidence": "Fill Intervention Report."
+    }
+}
