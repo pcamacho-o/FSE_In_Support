@@ -3,9 +3,9 @@ import { FlowService } from '../../services/flow.service';
 import { FlowData, Symptom, Step } from '../../models/flow.model';
 
 @Component({
-  selector: 'app-troubleshoot',
-  templateUrl: './troubleshoot.component.html',
-  styleUrls: ['./troubleshoot.component.css']
+  selector: 'ivA_troubleshooter',
+  templateUrl: './troubleshooter.component.html',
+  styleUrls: ['./troubleshooter.scss']
 })
 export class TroubleshooterComponent implements OnInit {
   data: FlowData | null = null;
