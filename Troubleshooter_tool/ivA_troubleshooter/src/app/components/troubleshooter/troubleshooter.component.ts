@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FlowService } from '../../services/flow.service';
-import { FlowData, Symptom, Step } from '../../models/flow.model';
+import { FlowService, FlowData, Symptom, Step } from '../../services/flow.service';
 
 @Component({
   selector: 'ivA_troubleshooter',
+  standalone: true,
   templateUrl: './troubleshooter.component.html',
-  styleUrls: ['./troubleshooter.scss']
+  styleUrls: ['./troubleshooter.component.scss']
 })
 export class TroubleshooterComponent implements OnInit {
   data: FlowData | null = null;
@@ -22,7 +22,7 @@ export class TroubleshooterComponent implements OnInit {
       next: d => {
         this.data = d;
         this.symptomLabels = d.symptoms.map(s => s.label);
-        // restore persisted state if present
+        // Restore persisted state if present
         const saved = localStorage.getItem('iva_state');
         if (saved) {
           try {
@@ -51,7 +51,6 @@ export class TroubleshooterComponent implements OnInit {
     if (!this.data) return;
     this.selectedLabel = label;
     this.selectedSymptom = this.data.symptoms.find(s => s.label === label) ?? null;
-
     if (restoreStepId) {
       this.currentStep = this.flowService.getStepById(restoreStepId) ?? this.selectedSymptom?.steps[0] ?? null;
     } else {
@@ -67,7 +66,6 @@ export class TroubleshooterComponent implements OnInit {
     if (nextStep) {
       this.currentStep = nextStep;
     } else {
-      // handle terminal flow completion
       this.currentStep = null;
     }
     this.saveState();

@@ -256,8 +256,8 @@
                 {
                 "id": "F1-02",
                 "module": "reagent_module",
-                "instruction": "Check main recervoir seals",
-                "detail": "Verify recervoir is tightly closed and sealed.",
+                "instruction": "Check main reservoir seals",
+                "detail": "Verify reservoir is tightly closed and sealed.",
                 "evidence": "Check for moisture around caps.",
                 "on_fail_next": "F1-03",
                 "on_pass_next": "F1-03"

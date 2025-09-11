@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { TroubleshooterComponent } from './components/troubleshooter/troubleshooter.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -7,10 +10,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-@Component({
-  selector: 'app-troubleshooter',
-  standalone: true,
+@NgModule({
+  declarations: [TroubleshooterComponent],
   imports: [
+    BrowserModule,
+    HttpClientModule,
     CommonModule,
     FormsModule,
     MatCardModule,
@@ -19,7 +23,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatToolbarModule
   ],
-  templateUrl: './troubleshooter.component.html',
-  styleUrls: ['./troubleshooter.scss']
+  bootstrap: [TroubleshooterComponent]
 })
-export class TroubleshooterComponent {}
+export class AppModule {}

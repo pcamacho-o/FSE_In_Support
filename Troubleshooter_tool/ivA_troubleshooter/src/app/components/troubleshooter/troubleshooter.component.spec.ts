@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Troubleshooter } from './troubleshooter';
+import { TroubleshooterComponent } from './troubleshooter.component';
 
-describe('Troubleshooter', () => {
-  let component: Troubleshooter;
-  let fixture: ComponentFixture<Troubleshooter>;
+describe('TroubleshooterComponent', () => {
+  let component: TroubleshooterComponent;
+  let fixture: ComponentFixture<TroubleshooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Troubleshooter]
+      imports: [TroubleshooterComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Troubleshooter);
+    fixture = TestBed.createComponent(TroubleshooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
