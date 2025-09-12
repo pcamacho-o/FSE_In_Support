@@ -15,8 +15,8 @@
         </mat-card-header>
 
         <img mat-card-image
-            *ngIf="currentStep.module && data?.modules[currentStep.module]"
-            [src]="data?.modules[currentStep.module].image"
+            *ngIf="currentStep.module && data && data.modules && data.modules[currentStep.module] && data.modules[currentStep.module].image"
+            [src]="data.modules[currentStep.module]?.image || 'assets/placeholder.png'"
             [alt]="currentStep.module">
 
         <mat-card-content>

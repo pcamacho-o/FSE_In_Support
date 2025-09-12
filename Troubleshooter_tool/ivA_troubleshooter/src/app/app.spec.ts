@@ -18,6 +18,6 @@ describe('TroubleshooterComponent', () => {
     const fixture = TestBed.createComponent(TroubleshooterComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ivA_troubleshooter');
+    expect(compiled.querySelector('mat-toolbar')?.textContent).toContain('ivA Troubleshooter');
   });
 });

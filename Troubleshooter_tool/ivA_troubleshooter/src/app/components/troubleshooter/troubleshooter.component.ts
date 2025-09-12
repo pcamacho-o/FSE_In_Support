@@ -14,7 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @Component({
-  selector: 'ivA_troubleshooter',
+  selector: 'app-root',
   standalone: true,
   imports: [ CommonModule,
     FormsModule,
