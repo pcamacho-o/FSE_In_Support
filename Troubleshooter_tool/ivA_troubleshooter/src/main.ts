@@ -1,6 +1,9 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { provideHttpClient } from '@angular/common/http';
 import { TroubleshooterComponent } from './app/components/troubleshooter/troubleshooter.component';
+import { appConfig } from './app/app.config';
 
-bootstrapApplication(TroubleshooterComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(TroubleshooterComponent, {
+  ...appConfig,               // spread your existing appConfig if needed
+  providers: [provideHttpClient()] // provide HttpClient here
+}).catch((err) => console.error(err));

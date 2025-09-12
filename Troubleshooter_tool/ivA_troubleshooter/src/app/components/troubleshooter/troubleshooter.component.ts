@@ -3,7 +3,6 @@ import { FlowService, FlowData, Symptom, Step } from '../../services/flow.servic
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 // Angular Material imports
 import { MatCardModule } from '@angular/material/card';
@@ -18,7 +17,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [ CommonModule,
     FormsModule,
-    HttpClientModule,
     MatCardModule,
     MatButtonModule,
     MatSelectModule,
