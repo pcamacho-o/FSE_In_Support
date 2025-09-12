@@ -38,7 +38,7 @@ export class FlowService {
   loadData(): Observable<FlowData> {
     return this.http.get<FlowData>('assets/analyzers_flow.json').pipe(
       tap(d => this.data = d)
-    );
+    );    
   }
 
   getSymptoms(): Symptom[] {
