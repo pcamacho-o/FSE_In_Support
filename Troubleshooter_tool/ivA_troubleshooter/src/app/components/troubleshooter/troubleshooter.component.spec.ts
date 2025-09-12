@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 import { TroubleshooterComponent } from './troubleshooter.component';
 
@@ -8,7 +9,8 @@ describe('TroubleshooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TroubleshooterComponent]
+      imports: [TroubleshooterComponent],
+      providers: [provideHttpClient()]
     })
     .compileComponents();
 

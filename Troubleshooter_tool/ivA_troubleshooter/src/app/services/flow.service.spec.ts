@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { FlowService } from './flow.service';
 
-describe('Flow', () => {
+describe('FlowService', () => {
   let service: FlowService;
 
   beforeEach(() => {

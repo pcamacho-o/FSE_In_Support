@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
-import { TroubleshooterComponent } from './app/components/troubleshooter/troubleshooter.component';
+import { TroubleshooterComponent } from './components/troubleshooter/troubleshooter.component';
 
 
 describe('TroubleshooterComponent', () => {
