@@ -24,6 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -31,14 +32,14 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            ]
+            // "server": "src/main.server.ts",
+            // "outputMode": "server",
+            // "ssr": {
+            //  "entry": "src/server.ts"
+            // }
           },
-          "configurations": {
+          "configurations": {  
             "production": {
               "budgets": [
                 {
