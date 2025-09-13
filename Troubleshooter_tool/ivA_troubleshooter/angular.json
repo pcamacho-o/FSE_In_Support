@@ -33,6 +33,7 @@
             "styles": [
               "src/styles.scss"
             ]
+            // If need to enable server-side rendering (SSR), uncomment the following lines and configure accordingly
             // "server": "src/main.server.ts",
             // "outputMode": "server",
             // "ssr": {
