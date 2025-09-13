@@ -42,7 +42,10 @@ export class TroubleshooterComponent implements OnInit {
         this.data = d;
         this.symptomLabels = d.symptoms.map(s => s.label);
         // Restore persisted state if present
-        const saved = localStorage.getItem('iva_state');
+        let saved: string | null = null;
+        if (typeof window !== 'undefined' && window.localStorage) {
+          saved = localStorage.getItem('iva_state');
+        }
         if (saved) {
           try {
             const st = JSON.parse(saved);
@@ -90,10 +93,12 @@ export class TroubleshooterComponent implements OnInit {
     this.saveState();
   }
 
-  saveState() {
-    localStorage.setItem('iva_state', JSON.stringify({
-      lastSymptom: this.selectedLabel,
-      currentStepId: this.currentStep?.id ?? null
-    }));
+    saveState() {
+      if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('iva_state', JSON.stringify({
+        lastSymptom: this.selectedLabel,
+        currentStepId: this.currentStep?.id ?? null
+      }));
+    }
   }
 }
