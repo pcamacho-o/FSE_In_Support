@@ -10,15 +10,9 @@
 
     <mat-card *ngIf="currentStep; else finishedTpl">
         <mat-card-header>
-        <mat-card-title>Step {{ currentStep.id }}</mat-card-title>
         <mat-card-subtitle *ngIf="currentStep.module">{{ currentStep.module.replace('_',' ') | titlecase }}</mat-card-subtitle>
         </mat-card-header>
-
-        <img mat-card-image
-            *ngIf="currentStep.module && data && data.modules && data.modules[currentStep.module] && data.modules[currentStep.module].image"
-            [src]="data.modules[currentStep.module]?.image || 'assets/placeholder.png'"
-            [alt]="currentStep.module">
-
+        
         <mat-card-content>
         <p><strong>Instruction:</strong> {{ currentStep.instruction }}</p>
         <p><strong>Detail:</strong> {{ currentStep.detail }}</p>
