@@ -1,24 +1,20 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import React from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Stack } from "expo-router";
+import { View, StyleSheet } from "react-native";
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
 
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
+export default function Layout(props: any) {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <GestureHandlerRootView style={styles.flex}>
+      <View style={styles.flex}>
+        <Stack screenOptions={{ headerShown: false }} />
+      </View>
+    </GestureHandlerRootView>
   );
 }
+
+
+const styles = StyleSheet.create({
+flex: { flex: 1 },
+});
