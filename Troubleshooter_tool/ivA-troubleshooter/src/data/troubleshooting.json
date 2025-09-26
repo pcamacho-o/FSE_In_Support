@@ -1,0 +1,36 @@
+    {
+    "power_supply": {
+        "symptom": "Device won’t turn on",
+        "steps": [
+        {
+            "id": 1,
+            "question": "Is the power cable connected?",
+            "yes": 2,
+            "no": "Check and connect the power cable."
+        },
+        {
+            "id": 2,
+            "question": "Is the power LED on?",
+            "yes": "Power supply OK, check other modules.",
+            "no": "Replace the power supply unit."
+        }
+        ]
+    },
+    "barcode_reader": {
+        "symptom": "Scanner not reading samples",
+        "steps": [
+        {
+            "id": 1,
+            "question": "Is the barcode clean?",
+            "yes": 2,
+            "no": "Clean the barcode and retry."
+        },
+        {
+            "id": 2,
+            "question": "Is the scanner LED on?",
+            "yes": "Check scanner calibration settings.",
+            "no": "Replace the scanner LED module."
+        }
+        ]
+    }
+    }
