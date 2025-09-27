@@ -19,7 +19,7 @@ contentContainerStyle={{ padding: 12 }}
 renderItem={({ item }) => (
 <TouchableOpacity
 style={styles.card}
-onPress={() => router.push({ pathname: "/troubleshooter/[symptomId]", params: { symptomId: item.id } })}
+onPress={() => router.push({ pathname: "../troubleshooter/[symptomId]", params: { symptomId: item.id } })}
 >
 <Text style={styles.cardTitle}>{item.label}</Text>
 <Text style={styles.cardSubtitle}>{item.id}</Text>
