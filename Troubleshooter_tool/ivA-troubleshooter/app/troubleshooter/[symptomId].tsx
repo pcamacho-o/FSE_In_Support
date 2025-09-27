@@ -28,7 +28,7 @@
     const snapPoints = useMemo(() => [0.22 * height, 0.7 * height], []);
 
     const moduleImage = getModuleImage(
-        currentStep?.module ?? symptom?.module_hint?.[0]
+        currentStep?.module ?? symptom?.module_hint?.[0] ?? "default"
     );
 
     const handleResult = useCallback(

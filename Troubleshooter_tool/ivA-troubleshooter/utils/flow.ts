@@ -36,11 +36,11 @@ return getStep(symptomId, nextId);
 
 // map modules to image requires
 const moduleImages: Record<string, any> = {
-power_supply: require("../assets/images/power_supply.png"),
+power_supply: require("../assets/images/power_supply.jpg"),
 arm_module: require("../assets/images/arm_module.png"),
-barcode_reader: require("../assets/images/barcode_reader.png"),
+barcode_reader: require("../assets/images/barcode_reader.jpg"),
 optics_module: require("../assets/images/optics_module.png"),
-fluidics_module: require("../assets/images/fluidics_module.png"),
+fluidics_module: require("../assets/images/fluidics_module.jpg"),
 reagent_module: require("../assets/images/reagent_module.png"),
 conveyor_module: require("../assets/images/conveyor_module.png"),
 cuvette_loader: require("../assets/images/cuvette_loader.png"),
