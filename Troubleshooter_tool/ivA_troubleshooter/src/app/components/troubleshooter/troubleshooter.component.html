@@ -1,62 +1,142 @@
-    <mat-toolbar color="primary">ivA Troubleshooter</mat-toolbar>
+<mat-toolbar color="primary" class="app-toolbar">
+  <button mat-icon-button *ngIf="currentStep" (click)="goBack()" aria-label="Go back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>ivA Troubleshooter</span>
+  <span class="spacer"></span>
+  <button mat-icon-button *ngIf="currentStep" (click)="exitFlow()" aria-label="Exit flow">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
 
-    <div class="bg-container" *ngIf="currentStep">
-    <img
-        class="bg-image"
-        [src]="'/assets' + currentStep.module + '.jpg'"
-        alt="module background"
-    />
-    </div>
+<!-- Loading State -->
+<div class="loading-container main-container" *ngIf="loading">
+  <div class="spinner"></div>
+  <p>Loading troubleshooting flow…</p>
+</div>
 
-    <div class="container" *ngIf="!loading && data; else loadingTpl">
-    <mat-form-field appearance="fill" style="width:100%;">
-        <mat-label>Symptom</mat-label>
-        <mat-select [value]="selectedLabel" (selectionChange)="selectSymptom($event.value)">
-        <mat-option *ngFor="let label of symptomLabels" [value]="label">
-            {{ label }}
-        </mat-option>
-        </mat-select>
+<!-- Dashboard View -->
+<div class="main-container dashboard-view" *ngIf="!loading && !currentStep && data">
+  
+  <div class="search-section">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search Symptoms or Error Codes</mat-label>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput [(ngModel)]="searchQuery" (ngModelChange)="onSearchChange()" placeholder="e.g., Unclear results or E201">
+      <button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''; onSearchChange()">
+        <mat-icon>close</mat-icon>
+      </button>
     </mat-form-field>
+  </div>
 
-    <!-- Swipeable Card -->
-    <div
-        class="card-wrapper"
-        #cardWrapper
-        [ngStyle]="{ transform: 'translateY(' + offsetY + 'px)' }"
-        (pointerdown)="onPointerDown($event)"
-        (pointermove)="onPointerMove($event)"
-        (pointerup)="onPointerUp()"
-        (pointercancel)="onPointerUp()"
-    >
-        <mat-card *ngIf="currentStep; else finishedTpl" class="troubleshoot-card">
+  <div class="filter-section">
+    <h3>Filter by Module</h3>
+    <div class="modules-grid">
+      <div 
+        class="module-item" 
+        *ngFor="let mod of modulesList" 
+        [class.selected]="selectedModuleFilter === mod.key"
+        (click)="toggleModuleFilter(mod.key)"
+        matRipple
+      >
+        <div class="module-img-wrapper">
+          <img [src]="'/' + mod.image" [alt]="mod.key">
+        </div>
+        <span class="module-name">{{ mod.key.replace('_', ' ') | titlecase }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="symptoms-section">
+    <h3>Available Symptoms ({{ filteredSymptoms.length }})</h3>
+    
+    <div class="symptoms-list">
+      <div class="symptom-empty" *ngIf="filteredSymptoms.length === 0">
+        <mat-icon>search_off</mat-icon>
+        <p>No symptoms match your criteria.</p>
+      </div>
+
+      <mat-card 
+        *ngFor="let symptom of filteredSymptoms" 
+        class="symptom-card"
+        (click)="startFlow(symptom)"
+        matRipple
+      >
         <mat-card-header>
-            <mat-card-subtitle *ngIf="currentStep.module">
-            {{ currentStep.module.replace('_',' ') | titlecase }}
-            </mat-card-subtitle>
+          <mat-card-title>{{ symptom.label }}</mat-card-title>
+          <mat-card-subtitle>
+            <span class="error-badge" *ngFor="let ec of symptom.error_codes">{{ ec }}</span>
+          </mat-card-subtitle>
         </mat-card-header>
-
-        <mat-card-content>
-            <p><strong>Instruction:</strong> {{ currentStep.instruction }}</p>
-            <p><strong>Detail:</strong> {{ currentStep.detail }}</p>
-            <p><strong>Evidence:</strong> {{ currentStep.evidence }}</p>
+        <mat-card-content *ngIf="symptom.module_hint.length > 0">
+          <div class="hints">
+            <span class="hint" *ngFor="let hint of symptom.module_hint">
+              <mat-icon class="hint-icon">settings</mat-icon>
+              {{ hint.replace('_', ' ') | titlecase }}
+            </span>
+          </div>
         </mat-card-content>
-
-        <mat-card-actions>
-            <button mat-raised-button color="primary" (click)="goNext(true)">✅ Pass</button>
-            <button mat-raised-button color="warn" (click)="goNext(false)">❌ Fail</button>
-        </mat-card-actions>
-        </mat-card>
+      </mat-card>
     </div>
-    </div>
+  </div>
+</div>
 
-    <ng-template #loadingTpl>
-    <div class="center">Loading flow…</div>
-    </ng-template>
+<!-- Flow View -->
+<div class="flow-view" *ngIf="currentStep">
+  <!-- Fancy Background Image for current step module -->
+  <div class="bg-container">
+    <img
+      *ngIf="currentStep.module && data && data.modules[currentStep.module]"
+      class="bg-image"
+      [src]="'/' + data.modules[currentStep.module].image"
+      alt="module background"
+    />
+    <div class="bg-overlay"></div>
+  </div>
 
-    <ng-template #finishedTpl>
-    <mat-card class="troubleshoot-card">
-        <mat-card-content>
-        <p>Flow finished or no next step. You can restart by choosing another symptom.</p>
-        </mat-card-content>
+  <div class="flow-content">
+    <mat-card class="step-card">
+      <mat-card-header>
+        <div class="step-header">
+          <div class="step-module" *ngIf="currentStep.module">
+            <mat-icon>build</mat-icon>
+            {{ currentStep.module.replace('_',' ') | titlecase }}
+          </div>
+          <div class="step-id">{{ currentStep.id }}</div>
+        </div>
+        <mat-card-title>{{ currentStep.instruction }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="detail-box">
+          <mat-icon class="info-icon">info</mat-icon>
+          <p>{{ currentStep.detail }}</p>
+        </div>
+        
+        <div class="evidence-box">
+          <h4><mat-icon>visibility</mat-icon> Evidence / Check</h4>
+          <p>{{ currentStep.evidence }}</p>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="action-buttons">
+        <!-- Close/Escalate Step Handling -->
+        <ng-container *ngIf="currentStep.id === 'escalate' || currentStep.id === 'close'; else regularActions">
+          <button mat-flat-button color="primary" class="full-width" (click)="exitFlow()">
+            <mat-icon>home</mat-icon> Return to Dashboard
+          </button>
+        </ng-container>
+
+        <!-- Normal Step Actions -->
+        <ng-template #regularActions>
+          <button mat-stroked-button color="warn" class="fail-btn" (click)="goNext(false)">
+            <mat-icon>cancel</mat-icon> Fail
+          </button>
+          <button mat-flat-button color="primary" class="pass-btn" (click)="goNext(true)">
+            <mat-icon>check_circle</mat-icon> Pass
+          </button>
+        </ng-template>
+      </mat-card-actions>
     </mat-card>
-    </ng-template>
+  </div>
+</div>

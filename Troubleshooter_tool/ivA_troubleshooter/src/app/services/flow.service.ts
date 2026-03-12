@@ -64,4 +64,12 @@ export class FlowService {
   getModules() {
     return this.data?.modules ?? {};
   }
+
+  getModuleList(): { key: string; image: string }[] {
+    if (!this.data) return [];
+    return Object.entries(this.data.modules).map(([key, val]) => ({
+      key,
+      image: val.image
+    }));
+  }
 }
