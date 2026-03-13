@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -31,29 +31,30 @@ export interface FlowData {
 
 @Injectable({ providedIn: 'root' })
 export class FlowService {
-  private data: FlowData | null = null;
-
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
+  private _data = signal<FlowData | null>(null);
+  data = this._data.asReadonly();
 
   loadData(): Observable<FlowData> {
     return this.http.get<FlowData>('assets/analyzers_flow.json').pipe(
-      tap(d => this.data = d)
+      tap(d => this._data.set(d))
     );    
   }
 
   getSymptoms(): Symptom[] {
-    return this.data?.symptoms ?? [];
+    return this.data()?.symptoms ?? [];
   }
 
   getSymptomByLabel(label: string): Symptom | undefined {
-    return this.data?.symptoms.find(s => s.label === label);
+    return this.data()?.symptoms.find(s => s.label === label);
   }
 
   getStepById(stepId?: string): Step | null {
-    if (!stepId || !this.data) return null;
-    if (stepId === 'escalate' || stepId === 'escalation') return this.data.escalation;
-    if (stepId === 'close') return this.data['close procedure'];
-    for (const s of this.data.symptoms) {
+    const data = this.data();
+    if (!stepId || !data) return null;
+    if (stepId === 'escalate' || stepId === 'escalation') return data.escalation;
+    if (stepId === 'close') return data['close procedure'];
+    for (const s of data.symptoms) {
       for (const step of s.steps) {
         if (step.id === stepId) return step;
       }
@@ -62,12 +63,13 @@ export class FlowService {
   }
 
   getModules() {
-    return this.data?.modules ?? {};
+    return this.data()?.modules ?? {};
   }
 
   getModuleList(): { key: string; image: string }[] {
-    if (!this.data) return [];
-    return Object.entries(this.data.modules).map(([key, val]) => ({
+    const data = this.data();
+    if (!data) return [];
+    return Object.entries(data.modules).map(([key, val]) => ({
       key,
       image: val.image
     }));

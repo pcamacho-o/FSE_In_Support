@@ -1,142 +1,166 @@
 <mat-toolbar color="primary" class="app-toolbar">
-  <button mat-icon-button *ngIf="currentStep" (click)="goBack()" aria-label="Go back">
-    <mat-icon>arrow_back</mat-icon>
-  </button>
+  @if (currentStep()) {
+    <button mat-icon-button (click)="goBack()" aria-label="Go back">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  }
   <span>ivA Troubleshooter</span>
   <span class="spacer"></span>
-  <button mat-icon-button *ngIf="currentStep" (click)="exitFlow()" aria-label="Exit flow">
-    <mat-icon>close</mat-icon>
-  </button>
+  @if (currentStep()) {
+    <button mat-icon-button (click)="exitFlow()" aria-label="Exit flow">
+      <mat-icon>close</mat-icon>
+    </button>
+  }
 </mat-toolbar>
 
 <!-- Loading State -->
-<div class="loading-container main-container" *ngIf="loading">
-  <div class="spinner"></div>
-  <p>Loading troubleshooting flow…</p>
-</div>
+@if (loading()) {
+  <div class="loading-container main-container">
+    <div class="spinner"></div>
+    <p>Loading troubleshooting flow…</p>
+  </div>
+}
 
 <!-- Dashboard View -->
-<div class="main-container dashboard-view" *ngIf="!loading && !currentStep && data">
-  
-  <div class="search-section">
-    <mat-form-field appearance="outline" class="search-field">
-      <mat-label>Search Symptoms or Error Codes</mat-label>
-      <mat-icon matPrefix>search</mat-icon>
-      <input matInput [(ngModel)]="searchQuery" (ngModelChange)="onSearchChange()" placeholder="e.g., Unclear results or E201">
-      <button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''; onSearchChange()">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-  </div>
+@if (!loading() && !currentStep() && data()) {
+  <div class="main-container dashboard-view">
+    
+    <div class="search-section">
+      <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Search Symptoms or Error Codes</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)" placeholder="e.g., Unclear results or E201">
+        @if (searchQuery()) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery.set('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+    </div>
 
-  <div class="filter-section">
-    <h3>Filter by Module</h3>
-    <div class="modules-grid">
-      <div 
-        class="module-item" 
-        *ngFor="let mod of modulesList" 
-        [class.selected]="selectedModuleFilter === mod.key"
-        (click)="toggleModuleFilter(mod.key)"
-        matRipple
-      >
-        <div class="module-img-wrapper">
-          <img [src]="'/' + mod.image" [alt]="mod.key">
-        </div>
-        <span class="module-name">{{ mod.key.replace('_', ' ') | titlecase }}</span>
+    <div class="filter-section">
+      <h3>Filter by Module</h3>
+      <div class="modules-grid">
+        @for (mod of modulesList(); track mod.key) {
+          <div 
+            class="module-item" 
+            [class.selected]="selectedModuleFilter() === mod.key"
+            (click)="toggleModuleFilter(mod.key)"
+            matRipple
+          >
+            <div class="module-img-wrapper">
+              <img [src]="'/' + mod.image" [alt]="mod.key">
+            </div>
+            <span class="module-name">{{ mod.key.replace('_', ' ') | titlecase }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="symptoms-section">
+      <h3>Available Symptoms ({{ filteredSymptoms().length }})</h3>
+      
+      <div class="symptoms-list">
+        @if (filteredSymptoms().length === 0) {
+          <div class="symptom-empty">
+            <mat-icon>search_off</mat-icon>
+            <p>No symptoms match your criteria.</p>
+          </div>
+        }
+
+        @for (symptom of filteredSymptoms(); track symptom.id) {
+          <mat-card 
+            class="symptom-card"
+            (click)="startFlow(symptom)"
+            matRipple
+          >
+            <mat-card-header>
+              <mat-card-title>{{ symptom.label }}</mat-card-title>
+              <mat-card-subtitle>
+                @for (ec of symptom.error_codes; track ec) {
+                  <span class="error-badge">{{ ec }}</span>
+                }
+              </mat-card-subtitle>
+            </mat-card-header>
+            @if (symptom.module_hint.length > 0) {
+              <mat-card-content>
+                <div class="hints">
+                  @for (hint of symptom.module_hint; track hint) {
+                    <span class="hint">
+                      <mat-icon class="hint-icon">settings</mat-icon>
+                      {{ hint.replace('_', ' ') | titlecase }}
+                    </span>
+                  }
+                </div>
+              </mat-card-content>
+            }
+          </mat-card>
+        }
       </div>
     </div>
   </div>
+}
 
-  <div class="symptoms-section">
-    <h3>Available Symptoms ({{ filteredSymptoms.length }})</h3>
-    
-    <div class="symptoms-list">
-      <div class="symptom-empty" *ngIf="filteredSymptoms.length === 0">
-        <mat-icon>search_off</mat-icon>
-        <p>No symptoms match your criteria.</p>
-      </div>
+<!-- Flow View -->
+@if (currentStep(); as step) {
+  <div class="flow-view">
+    <!-- Fancy Background Image for current step module -->
+    <div class="bg-container">
+      @if (step.module && data(); as d) {
+        @if (d.modules[step.module]; as module) {
+          <img
+            class="bg-image"
+            [src]="'/' + module.image"
+            alt="module background"
+          />
+        }
+      }
+      <div class="bg-overlay"></div>
+    </div>
 
-      <mat-card 
-        *ngFor="let symptom of filteredSymptoms" 
-        class="symptom-card"
-        (click)="startFlow(symptom)"
-        matRipple
-      >
+    <div class="flow-content">
+      <mat-card class="step-card">
         <mat-card-header>
-          <mat-card-title>{{ symptom.label }}</mat-card-title>
-          <mat-card-subtitle>
-            <span class="error-badge" *ngFor="let ec of symptom.error_codes">{{ ec }}</span>
-          </mat-card-subtitle>
+          <div class="step-header">
+            @if (step.module) {
+              <div class="step-module">
+                <mat-icon>build</mat-icon>
+                {{ step.module.replace('_',' ') | titlecase }}
+              </div>
+            }
+            <div class="step-id">{{ step.id }}</div>
+          </div>
+          <mat-card-title>{{ step.instruction }}</mat-card-title>
         </mat-card-header>
-        <mat-card-content *ngIf="symptom.module_hint.length > 0">
-          <div class="hints">
-            <span class="hint" *ngFor="let hint of symptom.module_hint">
-              <mat-icon class="hint-icon">settings</mat-icon>
-              {{ hint.replace('_', ' ') | titlecase }}
-            </span>
+
+        <mat-card-content>
+          <div class="detail-box">
+            <mat-icon class="info-icon">info</mat-icon>
+            <p>{{ step.detail }}</p>
+          </div>
+          
+          <div class="evidence-box">
+            <h4><mat-icon>visibility</mat-icon> Evidence / Check</h4>
+            <p>{{ step.evidence }}</p>
           </div>
         </mat-card-content>
+
+        <mat-card-actions class="action-buttons">
+          <!-- Close/Escalate Step Handling -->
+          @if (step.id === 'escalate' || step.id === 'close') {
+            <button mat-flat-button color="primary" class="full-width" (click)="exitFlow()">
+              <mat-icon>home</mat-icon> Return to Dashboard
+            </button>
+          } @else {
+            <button mat-stroked-button color="warn" class="fail-btn" (click)="goNext(false)">
+              <mat-icon>cancel</mat-icon> Fail
+            </button>
+            <button mat-flat-button color="primary" class="pass-btn" (click)="goNext(true)">
+              <mat-icon>check_circle</mat-icon> Pass
+            </button>
+          }
+        </mat-card-actions>
       </mat-card>
     </div>
   </div>
-</div>
-
-<!-- Flow View -->
-<div class="flow-view" *ngIf="currentStep">
-  <!-- Fancy Background Image for current step module -->
-  <div class="bg-container">
-    <img
-      *ngIf="currentStep.module && data && data.modules[currentStep.module]"
-      class="bg-image"
-      [src]="'/' + data.modules[currentStep.module].image"
-      alt="module background"
-    />
-    <div class="bg-overlay"></div>
-  </div>
-
-  <div class="flow-content">
-    <mat-card class="step-card">
-      <mat-card-header>
-        <div class="step-header">
-          <div class="step-module" *ngIf="currentStep.module">
-            <mat-icon>build</mat-icon>
-            {{ currentStep.module.replace('_',' ') | titlecase }}
-          </div>
-          <div class="step-id">{{ currentStep.id }}</div>
-        </div>
-        <mat-card-title>{{ currentStep.instruction }}</mat-card-title>
-      </mat-card-header>
-
-      <mat-card-content>
-        <div class="detail-box">
-          <mat-icon class="info-icon">info</mat-icon>
-          <p>{{ currentStep.detail }}</p>
-        </div>
-        
-        <div class="evidence-box">
-          <h4><mat-icon>visibility</mat-icon> Evidence / Check</h4>
-          <p>{{ currentStep.evidence }}</p>
-        </div>
-      </mat-card-content>
-
-      <mat-card-actions class="action-buttons">
-        <!-- Close/Escalate Step Handling -->
-        <ng-container *ngIf="currentStep.id === 'escalate' || currentStep.id === 'close'; else regularActions">
-          <button mat-flat-button color="primary" class="full-width" (click)="exitFlow()">
-            <mat-icon>home</mat-icon> Return to Dashboard
-          </button>
-        </ng-container>
-
-        <!-- Normal Step Actions -->
-        <ng-template #regularActions>
-          <button mat-stroked-button color="warn" class="fail-btn" (click)="goNext(false)">
-            <mat-icon>cancel</mat-icon> Fail
-          </button>
-          <button mat-flat-button color="primary" class="pass-btn" (click)="goNext(true)">
-            <mat-icon>check_circle</mat-icon> Pass
-          </button>
-        </ng-template>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-</div>
+}

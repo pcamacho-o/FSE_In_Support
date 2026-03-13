@@ -1,7 +1,6 @@
-// ... existing imports
-import { Component, OnInit } from '@angular/core';
-import { FlowService, FlowData, Symptom, Step } from '../../services/flow.service';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } from '@angular/core';
+import { FlowService, Symptom, Step } from '../../services/flow.service';
+import { TitleCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,9 +13,8 @@ import { MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
-    CommonModule,
+    TitleCasePipe,
     FormsModule,
     MatCardModule,
     MatButtonModule,
@@ -28,57 +26,41 @@ import { MatRippleModule } from '@angular/material/core';
     MatRippleModule
   ],
   templateUrl: './troubleshooter.component.html',
-  styleUrls: ['./troubleshooter.component.scss']
+  styleUrls: ['./troubleshooter.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TroubleshooterComponent implements OnInit {
-  data: FlowData | null = null;
-  loading = true;
+  private flowService = inject(FlowService);
 
-  // Dashboard Data
-  symptoms: Symptom[] = [];
-  filteredSymptoms: Symptom[] = [];
-  modulesList: { key: string; image: string }[] = [];
+  data = this.flowService.data;
+  loading = signal(true);
 
   // Filter State
-  searchQuery = '';
-  selectedModuleFilter: string | null = null;
+  searchQuery = signal('');
+  selectedModuleFilter = signal<string | null>(null);
 
   // Flow State
-  selectedSymptom: Symptom | null = null;
-  currentStep: Step | null = null;
-  stepHistory: string[] = []; // Stores IDs of previous steps
+  selectedSymptom = signal<Symptom | null>(null);
+  currentStep = signal<Step | null>(null);
+  stepHistory = signal<string[]>([]); // Stores IDs of previous steps
 
-  constructor(private flowService: FlowService) {}
+  // Computed Data
+  symptoms = computed(() => this.data()?.symptoms ?? []);
+  modulesList = computed(() => this.flowService.getModuleList());
 
-  ngOnInit(): void {
-    this.flowService.loadData().subscribe({
-      next: d => {
-        this.data = d;
-        this.symptoms = d.symptoms;
-        this.filteredSymptoms = [...this.symptoms];
-        this.modulesList = this.flowService.getModuleList();
-        
-        this.restoreState();
-        this.loading = false;
-      },
-      error: err => {
-        console.error('Failed loading flow JSON', err);
-        this.loading = false;
-      }
-    });
-  }
+  filteredSymptoms = computed(() => {
+    const query = this.searchQuery().toLowerCase();
+    const moduleFilter = this.selectedModuleFilter();
+    const allSymptoms = this.symptoms();
 
-  // --- Filtering ---
-  applyFilters() {
-    this.filteredSymptoms = this.symptoms.filter(sym => {
+    return allSymptoms.filter(sym => {
       // Module filter
-      if (this.selectedModuleFilter && !sym.module_hint.includes(this.selectedModuleFilter)) {
+      if (moduleFilter && !sym.module_hint.includes(moduleFilter)) {
         return false;
       }
 
       // Search query filter (matches label or error codes)
-      if (this.searchQuery) {
-        const query = this.searchQuery.toLowerCase();
+      if (query) {
         const matchesLabel = sym.label.toLowerCase().includes(query);
         const matchesErrorCode = sym.error_codes.some(ec => ec.toLowerCase().includes(query));
         if (!matchesLabel && !matchesErrorCode) {
@@ -88,66 +70,77 @@ export class TroubleshooterComponent implements OnInit {
 
       return true;
     });
+  });
+
+  ngOnInit(): void {
+    this.flowService.loadData().subscribe({
+      next: () => {
+        this.restoreState();
+        this.loading.set(false);
+      },
+      error: err => {
+        console.error('Failed loading flow JSON', err);
+        this.loading.set(false);
+      }
+    });
   }
 
+  // --- Filtering ---
   toggleModuleFilter(moduleKey: string) {
-    if (this.selectedModuleFilter === moduleKey) {
-      this.selectedModuleFilter = null; // Toggle off
-    } else {
-      this.selectedModuleFilter = moduleKey; // Toggle on
-    }
-    this.applyFilters();
+    this.selectedModuleFilter.update(current => current === moduleKey ? null : moduleKey);
   }
 
   onSearchChange() {
-    this.applyFilters();
+    // Computed property handles this automatically
   }
 
   // --- Flow Navigation ---
   startFlow(symptom: Symptom, resumeStepId?: string, resumeHistory?: string[]) {
-    this.selectedSymptom = symptom;
+    this.selectedSymptom.set(symptom);
     
     if (resumeStepId) {
-      this.currentStep = this.flowService.getStepById(resumeStepId) ?? symptom.steps[0] ?? null;
-      this.stepHistory = resumeHistory ?? [];
+      this.currentStep.set(this.flowService.getStepById(resumeStepId) ?? symptom.steps[0] ?? null);
+      this.stepHistory.set(resumeHistory ?? []);
     } else {
-      this.currentStep = symptom.steps[0] ?? null;
-      this.stepHistory = [];
+      this.currentStep.set(symptom.steps[0] ?? null);
+      this.stepHistory.set([]);
     }
     this.saveState();
   }
 
   goNext(pass: boolean) {
-    if (!this.currentStep) return;
+    const current = this.currentStep();
+    if (!current) return;
     
     // Save current step to history before moving forward
-    this.stepHistory.push(this.currentStep.id);
+    this.stepHistory.update(history => [...history, current.id]);
 
-    const nextId = pass ? this.currentStep.on_pass_next : this.currentStep.on_fail_next;
+    const nextId = pass ? current.on_pass_next : current.on_fail_next;
     const nextStep = this.flowService.getStepById(nextId);
-    this.currentStep = nextStep ?? null;
+    this.currentStep.set(nextStep ?? null);
     
     this.saveState();
   }
 
   goBack() {
-    if (this.stepHistory.length > 0) {
-      // Pop the last step ID from history
-      const prevId = this.stepHistory.pop();
+    const history = this.stepHistory();
+    if (history.length > 0) {
+      const newHistory = [...history];
+      const prevId = newHistory.pop();
+      this.stepHistory.set(newHistory);
       if (prevId) {
-        this.currentStep = this.flowService.getStepById(prevId);
+        this.currentStep.set(this.flowService.getStepById(prevId));
         this.saveState();
       }
     } else {
-      // If no history, exit to dashboard
       this.exitFlow();
     }
   }
 
   exitFlow() {
-    this.selectedSymptom = null;
-    this.currentStep = null;
-    this.stepHistory = [];
+    this.selectedSymptom.set(null);
+    this.currentStep.set(null);
+    this.stepHistory.set([]);
     this.saveState();
   }
 
@@ -157,9 +150,9 @@ export class TroubleshooterComponent implements OnInit {
       localStorage.setItem(
         'iva_state',
         JSON.stringify({
-          lastSymptomId: this.selectedSymptom?.id ?? null,
-          currentStepId: this.currentStep?.id ?? null,
-          stepHistory: this.stepHistory
+          lastSymptomId: this.selectedSymptom()?.id ?? null,
+          currentStepId: this.currentStep()?.id ?? null,
+          stepHistory: this.stepHistory()
         })
       );
     }
@@ -172,7 +165,7 @@ export class TroubleshooterComponent implements OnInit {
         try {
           const st = JSON.parse(saved);
           if (st.lastSymptomId) {
-            const sym = this.symptoms.find(s => s.id === st.lastSymptomId);
+            const sym = this.symptoms().find(s => s.id === st.lastSymptomId);
             if (sym) {
               this.startFlow(sym, st.currentStepId, st.stepHistory);
             }
